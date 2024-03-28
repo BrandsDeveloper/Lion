@@ -6,9 +6,7 @@
  * 
 **/
 
-$url = $_SERVER["REQUEST_SCHEME"].'://'.$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-var_dump($_SERVER);
-echo '<br>';
+$url = 'https://'.$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];
 echo $url;
 
 ?>
