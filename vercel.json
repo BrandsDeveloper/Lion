@@ -5,10 +5,7 @@
       }
     },
     "routes": [
-        { "src": "/api/css/(.*)", "methods": ["GET"], "dest": "/api/css/*.css" },
-        { "src": "/api/js/(.*)", "methods": ["GET"], "dest": "/api/js/*.js" },
-        { "src": "/api/img/(.*)", "methods": ["GET"], "dest": "/api/img/*.png" },
-        { "src": "/api/src/(.*)", "methods": ["GET"], "dest": "/api/src/*.scss" }
+        { "src": "/api/(.*)", "dest": "/api/$1" }
     ]
   }
   
