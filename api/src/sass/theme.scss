@@ -1,0 +1,68 @@
+// Abstract
+@import "abstract/fonts";
+@import "abstract/variable";
+@import "abstract/bootstrap";
+@import "abstract/mixins";
+
+// Components
+@import "components/card";
+
+// Layout
+@import "layout/header";
+@import "layout/page";
+
+*{
+    font-family: $font-family-base;
+    margin: 0;
+    padding: 0; 
+    color: $white;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+html{
+    border: 0px !important;
+    height: 100%;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: #1F1F1F;
+    height: 100%;
+
+    &::before, &::after{
+        content: '';
+        position: fixed;
+        top: 0px;
+        width: 1px;
+        height: 100%;
+        background: $light;
+
+    }
+
+    &::before{
+        left: 80px;
+    }
+
+    &::after{
+        right: 80px;
+    }
+
+    @include media-breakpoint-down(lg){
+        &::before{
+            left: 40px;
+        }
+
+        &::after{
+            right: 40px;
+        }
+    }
+    
+
+    @include media-breakpoint-down(md){
+        &::before, &::after{
+            content: none;            
+        }
+    }
+    
+}

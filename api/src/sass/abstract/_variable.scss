@@ -1,0 +1,105 @@
+// colors
+$primary: #E58F22;
+$secondary: #5FA7FB;
+$tertiary: #7400F9;
+$success: #04BF8A !default;
+$info: #0dcaf0 !default;
+$warning: #ffc107 !default;
+$danger: #DA0000 !default;
+$light: #f8f9fa !default;
+$dark: #1F1F1F !default;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+// Create your own map
+$custom-colors: (
+  "terciary": $tertiary,
+);
+
+// // Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$primary-light-15: lighten($primary, 15%);
+$secondary-light-15: lighten($secondary, 15%);
+
+// base
+$font-family-base: 'Montserrat', sans-serif;
+$font-size-base: 1rem; // 20px
+$body-color: $dark;
+
+// font weight
+//$font-weight-bolder: 800; // Extra bold
+
+// heading
+$headings-font-family: 'New York', sans-serif;
+$headings-font-weight: 700;
+
+$h1-font-size: 3.15rem; // 60px
+$h2-font-size: 2.525rem; // 50px
+$h3-font-size: 2.188rem; // 35px
+$h4-font-size: 1.563rem; // 25px
+$h5-font-size: 1.25rem; // 20px
+$h6-font-size: 1rem; // 16px
+
+
+// display
+$display-font-family:'New York', sans-serif;
+$display-font-weight: 700;
+
+$display-font-sizes: (
+    1: 12.625rem,
+    2: 8.5rem,
+    3: 6rem,
+    4: 5.5rem,
+    5: 3rem,
+    6: 2.5rem
+);
+
+// buttons
+$btn-padding-y: .7rem;
+$btn-padding-x: 3rem;
+$btn-font-family: $font-family-base;
+$btn-font-size: 1rem;
+$btn-line-height: 1;
+$btn-white-space: nowrap;
+$btn-font-weight: 600;
+$btn-border-width: 0;
+$btn-border-radius: 0px; // 32px
+
+// form-control
+$input-border-color: $dark;
+//$input-border-radius: 0;
+$input-focus-border-color: $secondary;
+$input-focus-box-shadow: none;
+$input-focus-width: 0;
+$input-btn-focus-box-shadow: none;
+//$form-floating-label-transform: scale(.85) translateY(-1rem) translateX(.15rem);
+
+// checks & radios
+$form-check-input-focus-border: none;
+$form-check-input-focus-box-shadow: none;
+
+
+// Accordion
+$accordion-icon-color: $body-color;
+$accordion-icon-active-color: $primary;
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);

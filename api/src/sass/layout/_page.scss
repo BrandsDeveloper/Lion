@@ -1,0 +1,143 @@
+.text-gradient{
+    background: linear-gradient(90deg, $white 40%, #959595 65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-custom{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    &:nth-of-type(1){
+
+        &::before{
+            content: "";
+            top: 95px;
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: #fff;
+        }
+        
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: #fff;
+    }
+    
+
+    &::after{
+        bottom: 35px;
+    }
+
+    @include media-breakpoint-down(lg){
+        height: auto;
+        padding: 3rem 0px;
+
+        &::after{
+            content: none;
+        }
+    }
+
+}
+
+#home{
+    padding-top: 60px;
+
+    .border-animate{
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            pointer-events: none;
+            top: -160px;
+            left: -275px;
+            background: radial-gradient(circle, #0e3a7c 0%, transparent 73%);
+        }
+        
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 600px;
+            height: 600px;
+            top: -400px;
+            left: 0px;
+            background: radial-gradient(circle, #69131B 0%, transparent 70%);
+        }
+    }
+
+    .display-custom{
+        font-size: 15rem;
+        font-weight: 100;
+    }
+
+    .fs-home{
+        font-weight: 100;
+        position: absolute;
+        left: 315px;
+        top: 20%;
+        opacity: .5;
+    }
+    
+    @include media-breakpoint-down(xxl){
+        .display-custom{
+            font-size: 13rem;
+        }
+        .fs-home{
+            left: 265px;
+            top: 15%;
+        }
+    }
+    
+    @include media-breakpoint-down(xl){
+        .display-custom{
+            font-size: 10rem;
+        }
+        .fs-home{
+            left: 181px;
+        }
+    }
+}
+
+#contato{
+
+    label{
+        font-size: 20px;
+    }
+
+    .form-control{
+        background: transparent !important;
+        outline: none !important;
+        padding-left: 0px;
+        border: 0px;
+        color: $white !important;
+        border-bottom: 1px solid #ffffff8c;
+        border-radius: 0px;
+        width: 50%;
+        font-weight: 100;
+        
+        @include media-breakpoint-down(md){
+            width: 100%;
+        }
+
+        &::placeholder{
+            color: $light;
+            opacity: .5;
+            font-size: 14px;
+            font-weight: 100;
+        }
+    }
+
+} 
