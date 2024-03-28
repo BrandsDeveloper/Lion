@@ -5,10 +5,10 @@
       }
     },
     "routes": [
-        { "src": "/api/css/(.*)", "dest": "/api/css/$1" },
-        { "src": "/api/js/(.*)", "dest": "/api/js/$1" },
-        { "src": "/api/img/(.*)", "dest": "/api/img/$1" },
-        { "src": "/api/src/(.*)", "dest": "/api/src/$1" }
+        { "src": "/api/css/(.*)", "methods": ["GET"], "dest": "/api/css/*.css" },
+        { "src": "/api/js/(.*)", "methods": ["GET"], "dest": "/api/js/*.js" },
+        { "src": "/api/img/(.*)", "methods": ["GET"], "dest": "/api/img/*.png" },
+        { "src": "/api/src/(.*)", "methods": ["GET"], "dest": "/api/src/*.scss" }
     ]
   }
   
