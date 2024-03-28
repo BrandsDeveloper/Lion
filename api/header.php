@@ -7,6 +7,9 @@
 **/
 
 $url = $_SERVER["REQUEST_SCHEME"].'://'.$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+var_dump($_SERVER);
+echo '<br>';
+echo $url;
 
 ?>
 
@@ -22,7 +25,7 @@ $url = $_SERVER["REQUEST_SCHEME"].'://'.$_SERVER["SERVER_NAME"].$_SERVER["REQUES
 
     <!-- Css Theme 
     ============================================ -->
-    <link rel="stylesheet" href="css/theme.min.css">
+    <link rel="stylesheet" href="<?= $url; ?>/css/theme.min.css">
 
 </head>
 <body>
