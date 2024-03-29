@@ -16,7 +16,7 @@ $url = 'https://'.$_SERVER["HTTP_HOST"];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Lion </title>
+    <title> Lion - Project Design and Developer</title>
 
     <link rel="shortcut icon" href="<?= $url; ?>/img/pain.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/498943cfa9.js" crossorigin="anonymous"></script>
