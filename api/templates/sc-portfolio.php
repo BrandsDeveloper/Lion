@@ -12,17 +12,17 @@
                         <div class="row gy-4">
                             <div class="col-md-6">
                                 <a href="#" class="c-card-project rounded-5">
-                                    <img src="<?= $url; ?>img/project_01.png" alt="project_01" class="c-card-project__image">
+                                    <img src="<?= $url; ?>/img/project_01.png" alt="project_01" class="c-card-project__image">
                                 </a>
                             </div>
                             <div class="col-md-6">
                                 <a href="#" class="c-card-project rounded-5">
-                                    <img src="<?= $url; ?>img/project_02.png" alt="project_02" class="c-card-project__image">
+                                    <img src="<?= $url; ?>/img/project_02.png" alt="project_02" class="c-card-project__image">
                                 </a>
                             </div>
                             <div class="col-12">
                                 <a href="#" class="c-card-project rounded-5">
-                                    <img src="<?= $url; ?>img/project_03.png" alt="project_03" class="c-card-project__image">
+                                    <img src="<?= $url; ?>/img/project_03.png" alt="project_03" class="c-card-project__image">
                                 </a>
                             </div>
                         </div>
