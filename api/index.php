@@ -6,9 +6,6 @@
  * 
 **/
 
-phpinfo();
-include ('conn.php');
-
 include ('header.php');
 
 echo '<main>';

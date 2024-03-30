@@ -18,17 +18,19 @@
 //     echo "Conexão bem-sucedida";
 // }
 
-$host =  $_ENV['POSTGRES_HOST'];
-$port = $_ENV['POSTGRES_PORT'];
-$dbname =  $_ENV['POSTGRES_DATABASE'];
-$user =  $_ENV['POSTGRES_USER'];
-$password =  $_ENV['POSTGRES_PASSWORD'];
+$host =  $_ENV['NEON_HOST'];
+$port = $_ENV['NEON_PORT'];
+$dbname =  $_ENV['NEON_DATABASE'];
+$user =  $_ENV['NEON_USER'];
+$password =  $_ENV['NEON_PASSWORD'];
 
 $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;user=$user;password=$password";
 
 try {
     // Criar uma conexão PDO
     $pdo = new PDO($dsn);
+
+    $pdo
 
     if($pdo){
         echo "Conectado ao banco de dados PostgreSQL com sucesso!";
