@@ -30,7 +30,7 @@ $user = $_ENV['DB_USER'];
 $password = $_ENV['DB_PASS'];
 
 // $conn = "pgsql:port=$port;dbname=$dbname;user=$user;password=$password;host=$host;";
-$conn = "mysql:host=$host;mysql:dbname=$dbname; $user; $password;";
+$conn = "mysql:host=$host; dbname=$dbname; $user; $password;";
 
 try {
     // Criar uma conexão PDO
