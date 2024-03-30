@@ -7,6 +7,7 @@
 **/
 
 phpinfo();
+include ('conn.php');
 
 include ('header.php');
 
