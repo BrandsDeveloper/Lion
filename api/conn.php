@@ -36,10 +36,6 @@ try {
     // Criar uma conexão PDO
     $pdo = new PDO($conn);
 
-    $stmt = $pdo->prepare("SELECT DATABASE");
-
-    $stmt->execute();
-
     if($pdo){
         // echo "Conectado ao banco de dados PostgreSQL com sucesso!";
         echo "Conectado ao banco de dados MYSQL com sucesso!";
