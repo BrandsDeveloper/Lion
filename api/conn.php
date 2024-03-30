@@ -17,6 +17,8 @@
 
 phpinfo();
 
+exit();
+
 //Acessao via PDO POSTGRES
 
 // $host =  $_ENV['POSTGRES_HOST'];
