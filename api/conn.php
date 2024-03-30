@@ -19,6 +19,12 @@ phpinfo();
 
 //Acessao via PDO POSTGRES
 
+// $host =  $_ENV['POSTGRES_HOST'];
+// $port = $_ENV['POSTGRES_PORT'];
+// $dbname =  $_ENV['POSTGRES_DATABASE'];
+// $user =  $_ENV['POSTGRES_USER'];
+// $password =  $_ENV['POSTGRES_PASSWORD'];
+
 $host =  $_ENV['NEON_HOST'];
 $port = $_ENV['NEON_PORT'];
 $dbname =  $_ENV['NEON_DB'];
