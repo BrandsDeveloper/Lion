@@ -29,11 +29,17 @@ $dbname =  $_ENV['NEON_DB'];
 $user =  $_ENV['NEON_USER'];
 $password =  $_ENV['NEON_PASS'];
 
-$dsn = "pgsql:port=$port;dbname=$dbname;user=$user;password=$password;host=$host;";
+$conn = "pgsql:port=$port;dbname=$dbname;user=$user;password=$password;host=$host;";
 
 try {
     // Criar uma conexão PDO
-    $pdo = new PDO($dsn);
+    $pdo = new PDO($conn);
+
+    $stmt = $pdo->prepare("SELECT DATABASE");
+
+    $stmt->execute();
+
+    var_dump($stmt->fetchAll());
 
     if($pdo){
         echo "Conectado ao banco de dados PostgreSQL com sucesso!";
