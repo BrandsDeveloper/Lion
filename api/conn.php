@@ -1,9 +1,6 @@
 <?php
 
-// $host = getenv('POSTGRES_HOST');
-// $db = getenv('POSTGRES_DATABASE');
-// $user = getenv('POSTGRES_USER');
-// $pass = getenv('POSTGRES_PASSWORD');
+//Acessao via MYSQL
 
 // $host = $_ENV['DB_HOST'];
 // $db = $_ENV['DB_TABLE'];
@@ -18,6 +15,10 @@
 //     echo "Conexão bem-sucedida";
 // }
 
+phpinfo();
+
+//Acessao via PDO POSTGRES
+
 $host =  $_ENV['NEON_HOST'];
 $port = $_ENV['NEON_PORT'];
 $dbname =  $_ENV['NEON_DATABASE'];
@@ -25,6 +26,8 @@ $user =  $_ENV['NEON_USER'];
 $password =  $_ENV['NEON_PASSWORD'];
 
 $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;user=$user;password=$password";
+
+var_dump($dsn);
 
 try {
     // Criar uma conexão PDO
