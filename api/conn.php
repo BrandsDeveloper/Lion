@@ -25,7 +25,7 @@ $dbname =  $_ENV['NEON_DB'];
 $user =  $_ENV['NEON_USER'];
 $password =  $_ENV['NEON_PASS'];
 
-$dsn = "pgsql:host=$host;port=$port;dbname=$dbname;user=$user;password=$password";
+$dsn = "pgsql:port=$port;dbname=$dbname;user=$user;password=$password;host=$host;";
 
 var_dump($dsn);
 
