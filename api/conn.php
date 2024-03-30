@@ -25,9 +25,9 @@
 // $password =  $_ENV['NEON_PASS'];
 
 $host = $_ENV['DB_HOST'];
-$db = $_ENV['DB_TABLE'];
+$dbname = $_ENV['DB_TABLE'];
 $user = $_ENV['DB_USER'];
-$pass = $_ENV['DB_PASS'];
+$password = $_ENV['DB_PASS'];
 
 // $conn = "pgsql:port=$port;dbname=$dbname;user=$user;password=$password;host=$host;";
 $conn = "mysql:host=$host;mysql:dbname=$dbname;user=$user;password=$password;";
