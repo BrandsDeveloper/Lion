@@ -19,27 +19,28 @@ phpinfo();
 
 //Acessao via PDO POSTGRES
 
-// $host =  $_ENV['NEON_HOST'];
-// $port = $_ENV['NEON_PORT'];
-// $dbname =  $_ENV['NEON_DATABASE'];
-// $user =  $_ENV['NEON_USER'];
-// $password =  $_ENV['NEON_PASSWORD'];
+$host =  $_ENV['NEON_HOST'];
+$port = $_ENV['NEON_PORT'];
+$dbname =  $_ENV['NEON_DB'];
+$user =  $_ENV['NEON_USER'];
+$password =  $_ENV['NEON_PASS'];
 
-// $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;user=$user;password=$password";
+$dsn = "pgsql:host=$host;port=$port;dbname=$dbname;user=$user;password=$password";
 
-// var_dump($dsn);
+var_dump($dsn);
 
-// try {
-//     // Criar uma conexão PDO
-//     $pdo = new PDO($dsn);
+try {
+    // Criar uma conexão PDO
+    $pdo = new PDO($dsn);
 
-//     $pdo
+    $pdo
 
-//     if($pdo){
-//         echo "Conectado ao banco de dados PostgreSQL com sucesso!";
-//     }
+    if($pdo){
+        echo "Conectado ao banco de dados PostgreSQL com sucesso!";
+    }
 
-// } catch (PDOException $e) {
-//     // Se ocorrer um erro na conexão, ele será exibido aqui
-//     echo $e->getMessage();
-// }
+} catch (PDOException $e) {
+    // Se ocorrer um erro na conexão, ele será exibido aqui
+    echo 'Encontramos um erro na conexão!! <br>';
+    echo $e->getMessage();
+}
