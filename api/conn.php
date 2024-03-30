@@ -15,10 +15,6 @@
 //     echo "Conexão bem-sucedida";
 // }
 
-phpinfo();
-
-exit();
-
 //Acessao via PDO POSTGRES
 
 // $host =  $_ENV['POSTGRES_HOST'];
@@ -35,13 +31,9 @@ $password =  $_ENV['NEON_PASS'];
 
 $dsn = "pgsql:port=$port;dbname=$dbname;user=$user;password=$password;host=$host;";
 
-var_dump($dsn);
-
 try {
     // Criar uma conexão PDO
     $pdo = new PDO($dsn);
-
-    $pdo
 
     if($pdo){
         echo "Conectado ao banco de dados PostgreSQL com sucesso!";
