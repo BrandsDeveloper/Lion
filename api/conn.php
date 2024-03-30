@@ -2,11 +2,6 @@
 
 //Acessao via MYSQL
 
-// $host = $_ENV['DB_HOST'];
-// $db = $_ENV['DB_TABLE'];
-// $user = $_ENV['DB_USER'];
-// $pass = $_ENV['DB_PASS'];
-
 // $conn = new mysqli($host, $user, $pass, $db);
 
 // if ($conn->connect_error) {
@@ -23,26 +18,31 @@
 // $user =  $_ENV['POSTGRES_USER'];
 // $password =  $_ENV['POSTGRES_PASSWORD'];
 
-$host =  $_ENV['NEON_HOST'];
-$port = $_ENV['NEON_PORT'];
-$dbname =  $_ENV['NEON_DB'];
-$user =  $_ENV['NEON_USER'];
-$password =  $_ENV['NEON_PASS'];
+// $host =  $_ENV['NEON_HOST'];
+// $port = $_ENV['NEON_PORT'];
+// $dbname =  $_ENV['NEON_DB'];
+// $user =  $_ENV['NEON_USER'];
+// $password =  $_ENV['NEON_PASS'];
 
-$conn = "pgsql:port=$port;dbname=$dbname;user=$user;password=$password;host=$host;";
+$host = $_ENV['DB_HOST'];
+$db = $_ENV['DB_TABLE'];
+$user = $_ENV['DB_USER'];
+$pass = $_ENV['DB_PASS'];
+
+// $conn = "pgsql:port=$port;dbname=$dbname;user=$user;password=$password;host=$host;";
+$conn = "mysql:host=$host;mysql:dbname=$dbname;user=$user;password=$password;";
 
 try {
     // Criar uma conexão PDO
     $pdo = new PDO($conn);
 
-    $stmt = $pdo->prepare("CREATE DATABASE Teste");
+    $stmt = $pdo->prepare("SELECT DATABASE");
 
     $stmt->execute();
 
-    var_dump($stmt->fetchAll());
-
     if($pdo){
-        echo "Conectado ao banco de dados PostgreSQL com sucesso!";
+        // echo "Conectado ao banco de dados PostgreSQL com sucesso!";
+        echo "Conectado ao banco de dados MYSQL com sucesso!";
     }
 
 } catch (PDOException $e) {
