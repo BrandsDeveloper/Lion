@@ -35,7 +35,7 @@ try {
     // Criar uma conexão PDO
     $pdo = new PDO($conn);
 
-    $stmt = $pdo->prepare("SELECT DATABASE");
+    $stmt = $pdo->prepare("CREATE DATABASE Teste");
 
     $stmt->execute();
 
