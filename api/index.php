@@ -6,6 +6,8 @@
  * 
 **/
 
+phpinfo();
+
 include ('header.php');
 
 echo '<main>';
