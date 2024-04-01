@@ -7,7 +7,7 @@
                     <p class="py-1 px-4 rounded-5 border border-1 border-primary text-primary mb-4"> Contato </p>
                     <h1 class="fw-light mb-0">Vamos trabalhar <span class="h1 text-primary fw-light">juntos! </span> </h1>
                     <p class="opacity-50 fw-lighter">Me conta sua história, e acredite que ela possa ser real!</p>
-                    <form action="" class="w-100 mt-4">
+                    <form action="<?= $url; ?>/api/inserir_contato.php" method="POST" class="w-100 mt-4">
 
                         <div class="form-group mb-4">
                             <label for="name">Qual seu nome?</label>

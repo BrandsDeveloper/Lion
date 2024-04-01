@@ -29,8 +29,6 @@ $dbname = $_ENV['DB_TABLE'];
 $user = $_ENV['DB_USER'];
 $password = $_ENV['DB_PASS'];
 
-echo $user;
-
 // $conn = "pgsql:port=$port;dbname=$dbname;user=$user;password=$password;host=$host;";
 
 try {
