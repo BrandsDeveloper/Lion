@@ -10,8 +10,8 @@
                     <form action="<?= $url; ?>/api/inserir_contato.php" method="POST" class="w-100 mt-4">
 
                         <div class="form-group mb-4">
-                            <label for="name">Qual seu nome?</label>
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Nome Completo">
+                            <label for="nome">Qual seu nome?</label>
+                            <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome Completo">
                         </div>
 
                         <div class="form-group mb-4">
