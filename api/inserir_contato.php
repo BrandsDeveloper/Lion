@@ -24,15 +24,13 @@ try {
         :projeto
     )');
 
-    $stmt->bindParam( array(
+    $stmt->execute( array(
         ':nome' => $nome ,
         ':email' => $email,
         ':tel' => $tel,
         ':orcamento' => $orcamento, 
         ':projeto' => $projeto, 
     ));
-
-    $stmt->execute();
 
     echo 'Deu Certo!';
     
