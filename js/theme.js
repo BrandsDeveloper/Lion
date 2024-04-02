@@ -1,4 +1,3 @@
-const { Button } = require("bootstrap");
 
 let url = document.querySelector('head').getAttribute('data-url');
 
