@@ -12,7 +12,7 @@ $url = 'https://'.$_SERVER["HTTP_HOST"];
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+<head data-url="<?= $url; ?>">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +20,7 @@ $url = 'https://'.$_SERVER["HTTP_HOST"];
 
     <link rel="shortcut icon" href="<?= $url; ?>/img/pain.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/498943cfa9.js" crossorigin="anonymous"></script>
+    <script src="<?= $url; ?>/js/theme.js"></script>
 
     <!-- Css Theme 
     ============================================ -->
