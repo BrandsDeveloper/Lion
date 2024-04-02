@@ -9,8 +9,8 @@
 
     <!-- Scripts Theme 
     ============================================ -->
-    <script src="js/theme.js"></script>
-    <script src="js/plugin.js"></script>
+    <script src="<?= $url; ?>/js/theme.js"></script>
+    <!-- <script src="js/plugin.js"></script> -->
 
 </div>
 <!-- End Wrapper  -->
