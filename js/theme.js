@@ -15,7 +15,7 @@ btn.addEventListener('click', () =>{
     let valor = document.querySelector('#orcamento').value
     let projeto = document.querySelector('#projeto').value
 
-    let post = 'nome='+nome+'&email='+email+'&tel='+tel+'&valor='+valor+'&projeto='+projeto;
+    let post = 'nome='+nome+'&email='+email+'&tel='+tel+'&orcamento='+valor+'&projeto='+projeto;
    
     ajax.open('POST', url+caminho, true);
     ajax.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
