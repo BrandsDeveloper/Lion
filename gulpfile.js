@@ -37,7 +37,7 @@ function compilaSass(){
     .src(css_src)
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(cssnano())
+    // .pipe(cssnano())
     .pipe(concat('temp.css'))
     .pipe(rename('theme.min.css'))
     .pipe(sourcemaps.write('.', {
