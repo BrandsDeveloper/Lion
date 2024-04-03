@@ -17,7 +17,7 @@ btn.addEventListener('click', () =>{
         projeto: document.querySelector('#projeto').value
     }
    
-    ajax.open('POST', url+caminho);
+    ajax.open('POST', url+caminho, true);
     ajax.setRequestHeader('Content-type', 'application/json')
 
     ajax.onreadystatechange = () =>{
