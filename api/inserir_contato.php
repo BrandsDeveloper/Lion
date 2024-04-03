@@ -32,7 +32,7 @@ try {
         ':projeto' => $projeto, 
     ));
 
-    echo '<br> Deu Certo!';
+    echo 'Inserido';
     
 } catch (PDOException $e) {
 
