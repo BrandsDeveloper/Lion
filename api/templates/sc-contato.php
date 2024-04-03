@@ -34,7 +34,7 @@
                             <input type="text" class="form-control" name="projeto" id="projeto" placeholder="Detalhes do projeto">
                         </div>
 
-                        <button type="submit" class="btn btn-primary text-white fw-light text-uppercase mt-4 rounded-5 d-inline-block py-3"> <i class="fa-solid fa-envelope me-2"></i> Me mostre suas ideais!</button>
+                        <button type="button" class="btn btn-primary text-white fw-light text-uppercase mt-4 rounded-5 d-inline-block py-3"> <i class="fa-solid fa-envelope me-2"></i> Me mostre suas ideais!</button>
                     </form>
                 </div>
             </div>
