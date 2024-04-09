@@ -53,12 +53,12 @@ btn.addEventListener('click', () =>{
 
             console.log('DEU CERTO!!');
             
-        } else if( ajax.status == 404 || ajax.readyState == 4 ){
+        } else if( ajax.status == 405 || ajax.readyState == 4 ){
             
             load.classList.add('d-none');
             let response = JSON.parse(ajax.responseText);
             console.log(response);
-            result.innerHTML = response[error];
+            result.innerHTML = response.error;
             
         } else if( ajax.readyState == 4 && ajax.status == 400 ){
             
