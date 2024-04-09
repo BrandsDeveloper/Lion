@@ -7,9 +7,9 @@ let content = document.querySelector('.start-wrapper');
 
 content.onscroll = function() {
     if (content.scrollTop > 150) {
-        menu.classList.add('d-none');
+        menu.classList.add('opacity-0');
     } else {
-        menu.classList.remove('d-none');
+        menu.classList.remove('opacity-0');
     }
 };
 
