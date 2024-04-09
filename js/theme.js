@@ -53,7 +53,12 @@ btn.addEventListener('click', () =>{
 
             console.log('DEU CERTO!!');
             
-        } else if( ajax.readyState == 4 && ajax.status == 404 ){
+        } else if( ajax.readyState == 4 && ajax.responseText == '' ){
+            
+            load.classList.add('d-none');
+            result.innerHTML = "Deu ruim";
+            
+        } else if( ajax.readyState == 4 && ajax.status == 400 ){
             
             console.log('DEU CERTO NO SERVIDOR, MAS DEU ERRO 404 !!');
             
