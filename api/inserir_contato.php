@@ -6,21 +6,23 @@ $tel = $_POST['tel'];
 $valor = $_POST['orcamento'];
 $projeto = $_POST['projeto'];
 
-function verificarVazio($var){
-    if( !empty($var)){
+function verificarVazio($post, $fieldName){
 
-        echo json_encode(
+    if( empty($post[$fieldName]) ) {
+
+        echo json_encode( array(
             'status' => "400",
             'error' => "Preencha o campo corretamente!",
-        );
+        ));
+        exit;
     }
 }
 
-verificarVazio($nome);
-verificarVazio($email);
-verificarVazio($tel);
-verificarVazio($valor);
-verificarVazio($projeto);
+verificarVazio($nome, 'nome');
+verificarVazio($email, 'email');
+verificarVazio($tel, 'telefone');
+verificarVazio($valor, 'valor');
+verificarVazio($projeto, 'projeto');
 
 include __DIR__ . '/conn.php';
 
