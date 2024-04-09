@@ -9,7 +9,7 @@ $projeto = $_POST['projeto'];
 function verificarVazio($post){
 
     if( empty($post) ) {
-
+        http_response_code(404);
         echo json_encode( array(
             'status' => "400",
             'error' => "Preencha o campo corretamente!",
