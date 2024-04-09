@@ -6,9 +6,9 @@ $tel = $_POST['tel'];
 $valor = $_POST['orcamento'];
 $projeto = $_POST['projeto'];
 
-function verificarVazio($post, $fieldName){
+function verificarVazio($post){
 
-    if( empty($post[$fieldName]) ) {
+    if( empty($post) ) {
 
         echo json_encode( array(
             'status' => "400",
@@ -18,11 +18,11 @@ function verificarVazio($post, $fieldName){
     }
 }
 
-verificarVazio($nome, 'nome');
-verificarVazio($email, 'email');
-verificarVazio($tel, 'telefone');
-verificarVazio($valor, 'valor');
-verificarVazio($projeto, 'projeto');
+verificarVazio($nome);
+verificarVazio($email);
+verificarVazio($tel);
+verificarVazio($valor);
+verificarVazio($projeto);
 
 include __DIR__ . '/conn.php';
 
