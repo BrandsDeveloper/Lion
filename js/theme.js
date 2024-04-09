@@ -1,4 +1,20 @@
+/* ======================================
+    ESCONDER MENU
+====================================== */
 
+let menu = document.querySelector('.header-default');
+
+window.onscroll = () => {
+    if( this.scrollY > 150 ){
+        menu.classList.add('d-none');
+    }else{
+        menu.classList.remove('d-none');
+    }
+};
+
+/* ======================================
+    AJAX ENVIO DE FORMS
+====================================== */
 let url = document.querySelector('head').getAttribute('data-url');
 
 let contato = document.querySelector('.form-contato');
@@ -27,7 +43,7 @@ btn.addEventListener('click', () =>{
         if( ajax.readyState == 4 && ajax.status == 200 && ajax.responseText == 'Inserido' ){
             
             load.classList.add('d-none');
-            result.innerHTML = "Informações inseridas com sucesso";
+            result.innerHTML = "Informações inseridas com sucesso!!";
             setTimeout( () => {
 
                 result.innerHTML = "";
