@@ -3,11 +3,12 @@
 ====================================== */
 
 let menu = document.querySelector('.header-default');
+let content = document.querySelector('.start-wrapper');
 
-window.onscroll = () => {
-    if( this.scrollY > 150 ){
+content.onscroll = function() {
+    if (content.scrollTop > 150) {
         menu.classList.add('d-none');
-    }else{
+    } else {
         menu.classList.remove('d-none');
     }
 };
