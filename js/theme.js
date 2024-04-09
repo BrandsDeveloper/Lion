@@ -53,10 +53,11 @@ btn.addEventListener('click', () =>{
 
             console.log('DEU CERTO!!');
             
-        } else if( ajax.readyState == 4 && ajax.responseText == '' ){
+        } else if( ajax.readyState == 4 && ajax.responseText == '{"status":"400","error":"Preencha o campo corretamente!"}' ){
             
             load.classList.add('d-none');
-            result.innerHTML = "Deu ruim";
+            let response = JSON.parse(ajax.responseText);
+            result.innerHTML = response;
             
         } else if( ajax.readyState == 4 && ajax.status == 400 ){
             
