@@ -2,7 +2,7 @@
     ESCONDER MENU
 ====================================== */
 
-let menu = document.querySelector('.header-default');
+let menu = document.querySelector('.header-default .menu');
 let content = document.querySelector('.start-wrapper');
 
 content.onscroll = function() {
