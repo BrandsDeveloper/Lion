@@ -101,30 +101,54 @@ btn.addEventListener('click', () =>{
         requestAnimationFrame(step);
     }
   
+    // Captura as seções e suas posições
+    const sections = Array.from(document.querySelectorAll('.section-custom')).map(section => {
+        return {
+        id: section.id,
+        offsetTop: section.offsetTop
+        };
+    });
+    
     // Event listener para links de navegação
     document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        var targetId = this.getAttribute('data-target');
+        const targetId = this.getAttribute('data-target');
         scrollDown(targetId, 2000);
         });
     });
-  
+    
     // Função para tratar o evento de roda do mouse
     function handleWheelEvent(e) {
-        // Descobrir a direção do scroll
-        var delta = e.deltaY || e.detail || e.wheelDelta;
-        if (delta < 0) {
-        // Scroll para cima
-        console.log("Scrolling up");
-        // Implementar a lógica para determinar o alvo da rolagem para cima
-        } else {
-        // Scroll para baixo
-        console.log("Scrolling down");
-        // Implementar a lógica para determinar o alvo da rolagem para baixo
+        e.preventDefault();
+        const currentPosition = window.pageYOffset;
+        const delta = e.deltaY || e.detail || e.wheelDelta;
+    
+        let targetSection;
+        
+        // Descobre se está rolando para cima ou para baixo e encontra a próxima seção
+        if (delta < 0) { // Rolando para cima
+        for (let i = sections.length - 1; i >= 0; i--) {
+            if (sections[i].offsetTop < currentPosition) {
+            targetSection = sections[i];
+            break;
+            }
+        }
+        } else { // Rolando para baixo
+        for (let i = 0; i < sections.length; i++) {
+            if (sections[i].offsetTop > currentPosition + window.innerHeight) {
+            targetSection = sections[i];
+            break;
+            }
+        }
+        }
+    
+        // Se houver uma seção alvo, rola até ela
+        if (targetSection) {
+        scrollDown(targetSection.id, 2000);
         }
     }
-  
+    
     // Adiciona o event listener para o evento de 'wheel'
     document.addEventListener('wheel', handleWheelEvent);
   
