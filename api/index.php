@@ -8,7 +8,7 @@
 
 include ('header.php');
 
-echo '<main id="fullpage">';
+echo '<main>';
 include ('templates/sc-home.php');
 include ('templates/sc-sobre.php');
 include ('templates/sc-jornada.php');
