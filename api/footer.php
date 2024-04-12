@@ -10,7 +10,7 @@
     <!-- Scripts Theme 
     ============================================ -->
     <script src="<?= $url; ?>/js/theme.js"></script>
-    <script src="<?= $url; ?>/js/plugin.js"></script>
+    <script src="<?= $url; ?>/js/plugins.min.js"></script>
     <script>
         new fullpage('#fullpage', {
      
