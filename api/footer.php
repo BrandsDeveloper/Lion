@@ -10,10 +10,13 @@
     <!-- Scripts Theme 
     ============================================ -->
     <script src="<?= $url; ?>/js/theme.js"></script>
-    <script src="<?= $url; ?>/js/plugins.min.js"></script>
+    <script src="<?= $url; ?>/js/plugins.js"></script>
     <script>
-        let scroll = new fullpage('#fullpage', {
-     
+        var myFullpage = new fullpage('#fullpage', {
+            //opções aqui
+            autoScrolling:true,
+            scrollHorizontally: true
+
         });
     </script>
 
