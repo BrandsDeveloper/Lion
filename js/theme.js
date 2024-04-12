@@ -120,7 +120,7 @@ document.querySelectorAll('nav a[data-target]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const targetId = this.getAttribute('data-target');
-    scrollDown(targetId, 2000);
+    scrollDown(targetId, 200);
   });
 });
 
@@ -155,7 +155,7 @@ function handleWheelEvent(e) {
   // Se houver uma seção alvo, rola até ela
   if (targetSection) {
     e.preventDefault();
-    scrollDown(targetSection.id, 2000);
+    scrollDown(targetSection.id, 200);
   }
 }
 
