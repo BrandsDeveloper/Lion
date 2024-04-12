@@ -13,11 +13,13 @@ const notify = require('gulp-notify');
 // Source Path
 var js_src = [
     "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+    "./node_modules/fullpage.js/dist/fullpage.min.js",
 ];
 
 var css_src = [
     'src/sass/**/*.scss',
     './node_modules/animate.css/animate.min.css',
+    './node_modules/fullpage.js/dist/fullpage.min.css',
 ];
  
 // Minify e Concat Scripts

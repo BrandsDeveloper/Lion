@@ -10,7 +10,12 @@
     <!-- Scripts Theme 
     ============================================ -->
     <script src="<?= $url; ?>/js/theme.js"></script>
-    <!-- <script src="js/plugin.js"></script> -->
+    <script src="<?= $url; ?>/js/plugin.js"></script>
+    <script>
+        new fullpage('#fullpage', {
+     
+        });
+    </script>
 
 </div>
 <!-- End Wrapper  -->
