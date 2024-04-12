@@ -150,5 +150,5 @@ btn.addEventListener('click', () =>{
     }
     
     // Adiciona o event listener para o evento de 'wheel'
-    document.addEventListener('wheel', handleWheelEvent);
+    document.addEventListener('wheel', handleWheelEvent, { passive: false });
   
