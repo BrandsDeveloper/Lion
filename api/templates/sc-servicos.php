@@ -1,5 +1,4 @@
-<section class="section-custom section" id="home">
-<section class="section-custom " id="servicos">
+<section class="section-custom section" id="servicos">
     <div class="border-animate w-100"> </div>
     <div class="container">
         <div class="row justify-content-between">
