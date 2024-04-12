@@ -12,9 +12,9 @@ const notify = require('gulp-notify');
  
 // Source Path
 var js_src = [
-    "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-    "./node_modules/fullpage.js/dist/fullpage.min.js",
-    "./node_modules/fullpage.js/vendors/easings.min.js",
+    "./node_modules/bootstrap/dist/js/bootstrap.js",
+    "./node_modules/fullpage.js/dist/fullpage.js",
+    "./node_modules/fullpage.js/vendors/easings.js",
 ];
 
 var css_src = [
