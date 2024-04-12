@@ -30,7 +30,7 @@ $url = 'https://'.$_SERVER["HTTP_HOST"];
 
 <!-- Start Wrapper
 ============================================ -->
-<div id="fullpage" class="start-wrapper">
+<div class="start-wrapper">
 
 <!--  Start Header
 ============================================ -->
