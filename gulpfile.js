@@ -14,6 +14,7 @@ const notify = require('gulp-notify');
 var js_src = [
     "./node_modules/bootstrap/dist/js/bootstrap.min.js",
     "./node_modules/fullpage.js/dist/fullpage.min.js",
+    "./node_modules/fullpage.js/vendors/easings.min.js",
 ];
 
 var css_src = [
