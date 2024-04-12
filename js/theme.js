@@ -120,7 +120,7 @@ btn.addEventListener('click', () =>{
     
     // Função para tratar o evento de roda do mouse
     function handleWheelEvent(e) {
-        e.preventDefault();
+        // e.preventDefault();
         const currentPosition = window.pageYOffset;
         const delta = e.deltaY || e.detail || e.wheelDelta;
     
@@ -150,5 +150,5 @@ btn.addEventListener('click', () =>{
     }
     
     // Adiciona o event listener para o evento de 'wheel'
-    document.addEventListener('wheel', handleWheelEvent, { passive: false });
+    document.addEventListener('wheel', handleWheelEvent);
   
