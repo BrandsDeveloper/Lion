@@ -131,7 +131,7 @@ function handleWheelEvent(e) {
     return;
   }
   
-  const currentPosition = window.pageYOffset;
+  const currentPosition = window.scrollY;
   const delta = e.deltaY || e.detail || e.wheelDelta;
   let targetSection;
 
@@ -144,7 +144,7 @@ function handleWheelEvent(e) {
       }
     }
   } else { // Rolando para baixo
-    for (let i = 0; i < sections.length; i++) {
+    for (let i = sections.length + 1; i >= 0; i++) {
       if (sections[i].offsetTop > currentPosition + window.innerHeight) {
         targetSection = sections[i];
         break;
@@ -160,6 +160,6 @@ function handleWheelEvent(e) {
 }
 
 // Adiciona o event listener para o evento de 'wheel'
-document.addEventListener('wheel', handleWheelEvent, { passive: false });
+document.addEventListener('wheel', handleWheelEvent);
 
   
