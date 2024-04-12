@@ -72,3 +72,59 @@ btn.addEventListener('click', () =>{
     console.log(ajax);
 
 });
+
+    // Função de rolagem suave
+    function scrollDown(to, duration) {
+        var to = document.getElementById(to);
+        var to_position = to.getBoundingClientRect().top;
+        var start_position = window.pageYOffset;
+        var distance_to_position = start_position - to_position;
+        var start = null;
+    
+        function step(timestamp) {
+        var progress;
+        if (start === null) start = timestamp;
+        progress = timestamp - start;
+        window.scrollTo(0, smooth(progress, start_position, distance_to_position, duration));
+        if (progress < 2000) {
+            requestAnimationFrame(step);
+        }
+        }
+    
+        function smooth(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+    
+        requestAnimationFrame(step);
+    }
+  
+    // Event listener para links de navegação
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        var targetId = this.getAttribute('data-target');
+        scrollDown(targetId, 2000);
+        });
+    });
+  
+    // Função para tratar o evento de roda do mouse
+    function handleWheelEvent(e) {
+        // Descobrir a direção do scroll
+        var delta = e.deltaY || e.detail || e.wheelDelta;
+        if (delta < 0) {
+        // Scroll para cima
+        console.log("Scrolling up");
+        // Implementar a lógica para determinar o alvo da rolagem para cima
+        } else {
+        // Scroll para baixo
+        console.log("Scrolling down");
+        // Implementar a lógica para determinar o alvo da rolagem para baixo
+        }
+    }
+  
+    // Adiciona o event listener para o evento de 'wheel'
+    document.addEventListener('wheel', handleWheelEvent);
+  
