@@ -12,7 +12,7 @@
     <script src="<?= $url; ?>/js/theme.js"></script>
     <script src="<?= $url; ?>/js/plugins.min.js"></script>
     <script>
-        new fullpage('#fullpage', {
+        let scroll = new fullpage('#fullpage', {
      
         });
     </script>
