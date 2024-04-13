@@ -18,7 +18,6 @@ var js_src = [
 var css_src = [
     'src/sass/**/*.scss',
     './node_modules/animate.css/animate.min.css',
-    './node_modules/fullpage.js/dist/fullpage.min.css',
 ];
  
 // Minify e Concat Scripts

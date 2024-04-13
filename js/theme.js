@@ -150,26 +150,26 @@ linksMenu.forEach(link => {
     currentSection.setAttribute('data-current-section', getCurrentSection());
   });
 
-  // Função para tratar o evento de roda do mouse
-  function handleWheelEvent(e) {
+  // // Função para tratar o evento de roda do mouse
+  // function handleWheelEvent(e) {
 
-    // Descobrir a direção do scroll
-    var delta = e.deltaY || e.detail || e.wheelDelta;
-    if (delta < 0) {
-    let currentSection = document.querySelector('div[data-current-section]');
-    // Scroll para cima
-    console.log("Scrolling up");
-    scrollDown(currentSection.getAttribute('data-current-section'), 200);
-    // Implementar a lógica para determinar o alvo da rolagem para cima
-    } else {
-    // Scroll para baixo
-    console.log("Scrolling down");
-    scrollDown(currentSection.getAttribute('data-current-section'), 200);
-    // Implementar a lógica para determinar o alvo da rolagem para baixo
-    }
-  }
+  //   // Descobrir a direção do scroll
+  //   var delta = e.deltaY || e.detail || e.wheelDelta;
+  //   if (delta < 0) {
+  //   let currentSection = document.querySelector('div[data-current-section]');
+  //   // Scroll para cima
+  //   console.log("Scrolling up");
+  //   scrollDown(currentSection.getAttribute('data-current-section'), 200);
+  //   // Implementar a lógica para determinar o alvo da rolagem para cima
+  //   } else {
+  //   // Scroll para baixo
+  //   console.log("Scrolling down");
+  //   scrollDown(currentSection.getAttribute('data-current-section'), 200);
+  //   // Implementar a lógica para determinar o alvo da rolagem para baixo
+  //   }
+  // }
 
-  document.addEventListener('wheel', handleWheelEvent);
+  // document.addEventListener('wheel', handleWheelEvent);
 
 
   
