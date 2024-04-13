@@ -91,7 +91,7 @@ linksMenu.forEach(link => {
     currentSection.setAttribute('data-current-section', getCurrentSection());
   });
 
-  // Função para rolar suavemente para a próxima seção
+// Função para rolar suavemente para a próxima seção
 function scrollNextSection() {
   const currentSection = document.querySelector('div[data-current-section]');
   const currentSectionId = currentSection.getAttribute('data-current-section');
@@ -128,22 +128,15 @@ function getPreviousSectionId(currentSectionId) {
 }
 
 // Evento de scroll para rolar suavemente para a próxima seção ao rolar para baixo
+let lastScrollTop = 0;
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
   const windowHeight = window.innerHeight;
   const documentHeight = document.body.clientHeight;
 
   // Se estiver perto do final da página, não rolar para a próxima seção
-  if (scrollPosition + windowHeight >= documentHeight - 100) return;
+  if
 
-  // Se estiver rolando para baixo, role suavemente para a próxima seção
-  if (scrollPosition > lastScrollTop) {
-    scrollNextSection();
-  } else {
-    scrollPreviousSection();
-  }
-  lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition;
-});
 
 
 /* ======================================
