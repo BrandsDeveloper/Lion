@@ -80,37 +80,33 @@ let isScrolling = false;
           }
       }
 
-      // Se nenhuma seção estiver visível, retorne null ou outro valor padrão
       return null;
   }
 
-  // Muda o atrubuto sempre que a seção estiver na tela
+  // Muda o atributo sempre que a seção estiver na tela
   window.addEventListener('scroll', () => {
     let currentSection = document.querySelector('div[data-current-section]');
     currentSection.setAttribute('data-current-section', getCurrentSection());
   });
 
-  // Função para tratar o evento de roda do mouse
-  function handleWheelEvent(e) {
-
-    var delta = e.deltaY || e.detail || e.wheelDelta;
-    if (delta < 0) {
-
-      let currentSection = document.querySelector('div[data-current-section]');
-      console.log("Scrolling up");
-      currentSection.getAttribute('data-current-section').scrollIntoView({ behavior: "smooth" });
-
-    } else {
-      currentSection.getAttribute('data-current-section').scrollIntoView({ behavior: "smooth" });
-    }
+  // // Função para tratar o evento de roda do mouse
+  // function handleWheelEvent(e) {
     
-  }
+  //   let currentSection = document.querySelector('div[data-current-section]');
+  //   var delta = e.deltaY || e.detail || e.wheelDelta;
+  //   if (delta < 0) {
+  //     currentSection.getAttribute('data-current-section').scrollIntoView({ behavior: "smooth" });
+  //   } else {
+  //     currentSection.getAttribute('data-current-section').scrollIntoView({ behavior: "smooth" });
+  //   }
 
-  setTimeout(() => {
+  // }
+
+  // setTimeout(() => {
     
-    document.addEventListener('scroll', handleWheelEvent);
+  //   document.addEventListener('scroll', handleWheelEvent);
 
-  }, 1000);
+  // }, 1000);
 
 
 /* ======================================
