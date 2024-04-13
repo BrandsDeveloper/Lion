@@ -24,8 +24,8 @@ function scrollDown(targetId, duration) {
   if (isScrolling) return; // Não inicia uma nova rolagem se já estiver rolando
   isScrolling = true;
   var to = document.getElementById(targetId);
-  var to_position = to.getBoundingClientRect().top + window.pageYOffset;
-  var start_position = window.pageYOffset;
+  var to_position = to.getBoundingClientRect().top + content.scrollTop;
+  var start_position = content.scrollTop;
   var distance_to_position = to_position - start_position;
   var start = null;
 
@@ -33,7 +33,7 @@ function scrollDown(targetId, duration) {
     var progress;
     if (start === null) start = timestamp;
     progress = timestamp - start;
-    window.scrollTo(0, smooth(progress, start_position, distance_to_position, duration));
+    content.scrollTo(0, smooth(progress, start_position, distance_to_position, duration));
     if (progress < duration) {
       requestAnimationFrame(step);
     } else {
@@ -110,7 +110,7 @@ linksMenu.forEach(link => {
   // }
 
   // document.addEventListener('wheel', handleWheelEvent);
-  
+
 
 /* ======================================
     AJAX ENVIO DE FORMS
