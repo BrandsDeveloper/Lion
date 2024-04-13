@@ -73,6 +73,10 @@ btn.addEventListener('click', () =>{
 
 });
 
+/* ======================================
+    SCROLL MENU E SCROLL SECTIONS
+====================================== */
+
 let isScrolling = false;
 
 // Função de rolagem suave
@@ -155,15 +159,17 @@ linksMenu.forEach(link => {
     let currentSection = document.querySelector('div[data-current-section]');
     // Scroll para cima
     console.log("Scrolling up");
-    scrollDown(currentSection.getAttribute(), 200);
+    scrollDown(currentSection.getAttribute('data-current-section'), 200);
     // Implementar a lógica para determinar o alvo da rolagem para cima
     } else {
     // Scroll para baixo
     console.log("Scrolling down");
-    scrollDown(currentSection.getAttribute(), 200);
+    scrollDown(currentSection.getAttribute('data-current-section'), 200);
     // Implementar a lógica para determinar o alvo da rolagem para baixo
     }
   }
+
+  document.addEventListener('wheel', handleWheelEvent);
 
 
   
