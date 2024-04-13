@@ -59,7 +59,7 @@ linksMenu.forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault();
     const targetId = this.getAttribute('data-target');
-    targetId.scrollIntoView({ behavior: "smooth" });
+    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
   });
 
 });
@@ -90,6 +90,61 @@ linksMenu.forEach(link => {
     let currentSection = document.querySelector('div[data-current-section]');
     currentSection.setAttribute('data-current-section', getCurrentSection());
   });
+
+  // Função para rolar suavemente para a próxima seção
+function scrollNextSection() {
+  const currentSection = document.querySelector('div[data-current-section]');
+  const currentSectionId = currentSection.getAttribute('data-current-section');
+  const nextSectionId = getNextSectionId(currentSectionId);
+  const nextSection = document.getElementById(nextSectionId);
+  if (nextSection) {
+    nextSection.scrollIntoView({ behavior: 'smooth' });
+    currentSection.setAttribute('data-current-section', nextSectionId);
+  }
+}
+
+// Função para rolar suavemente para a seção anterior
+function scrollPreviousSection() {
+  const currentSection = document.querySelector('div[data-current-section]');
+  const currentSectionId = currentSection.getAttribute('data-current-section');
+  const previousSectionId = getPreviousSectionId(currentSectionId);
+  const previousSection = document.getElementById(previousSectionId);
+  if (previousSection) {
+    previousSection.scrollIntoView({ behavior: 'smooth' });
+    currentSection.setAttribute('data-current-section', previousSectionId);
+  }
+}
+
+// Função para obter o ID da próxima seção
+function getNextSectionId(currentSectionId) {
+  const currentSectionIndex = Array.from(sections).findIndex(section => section.id === currentSectionId);
+  return sections[currentSectionIndex + 1] ? sections[currentSectionIndex + 1].id : currentSectionId;
+}
+
+// Função para obter o ID da seção anterior
+function getPreviousSectionId(currentSectionId) {
+  const currentSectionIndex = Array.from(sections).findIndex(section => section.id === currentSectionId);
+  return sections[currentSectionIndex - 1] ? sections[currentSectionIndex - 1].id : currentSectionId;
+}
+
+// Evento de scroll para rolar suavemente para a próxima seção ao rolar para baixo
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.body.clientHeight;
+
+  // Se estiver perto do final da página, não rolar para a próxima seção
+  if (scrollPosition + windowHeight >= documentHeight - 100) return;
+
+  // Se estiver rolando para baixo, role suavemente para a próxima seção
+  if (scrollPosition > lastScrollTop) {
+    scrollNextSection();
+  } else {
+    scrollPreviousSection();
+  }
+  lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition;
+});
+
 
 /* ======================================
     AJAX ENVIO DE FORMS
