@@ -20,96 +20,94 @@ content.onscroll = function() {
 let isScrolling = false;
 
 // Função de rolagem suave
-function scrollDown(targetId, duration) {
-  if (isScrolling) return; // Não inicia uma nova rolagem se já estiver rolando
+function scrollSmooth(targetId, duration) {
+  if (isScrolling) return;
   isScrolling = true;
-  var to = document.getElementById(targetId);
-  var to_position = to.getBoundingClientRect().top + content.scrollTop;
-  var start_position = content.scrollTop;
-  var distance_to_position = to_position - start_position;
-  var start = null;
+
+  const targetSection = document.getElementById(targetId);
+  const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+  const startPosition = window.pageYOffset;
+  const distanceToPosition = targetPosition - startPosition;
+  let start = null;
 
   function step(timestamp) {
-    var progress;
-    if (start === null) start = timestamp;
-    progress = timestamp - start;
-    content.scrollTo(0, smooth(progress, start_position, distance_to_position, duration));
+    if (!start) start = timestamp;
+    const progress = timestamp - start;
+    window.scrollTo(0, smooth(progress, startPosition, distanceToPosition, duration));
+
     if (progress < duration) {
       requestAnimationFrame(step);
     } else {
-      isScrolling = false; // Resseta a flag quando a animação termina
+      isScrolling = false;
     }
-  }
-
-  function smooth(t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return c / 2 * t * t + b;
-    t--;
-    return -c / 2 * (t * (t - 2) - 1) + b;
   }
 
   requestAnimationFrame(step);
 }
 
-// Evento de tirar link da URL mas manter funçao de Scroll ao clicar no 
-let linksMenu = document.querySelectorAll('nav a[data-target]');
-linksMenu.forEach(link => {
+function smooth(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return c / 2 * t * t + b;
+  t--;
+  return -c / 2 * (t * (t - 2) - 1) + b;
+}
 
+// Evento de clique nos links do menu para rolar suavemente para a seção correspondente
+const linksMenu = document.querySelectorAll('nav a[data-target]');
+linksMenu.forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault();
     const targetId = this.getAttribute('data-target');
-    scrollDown(targetId, 200);
+    scrollSmooth(targetId, 200);
   });
-
 });
 
-  // Seletor para todas as seções do seu site
-  const sections = document.querySelectorAll('.section-custom');
+// Função para determinar qual seção está atualmente visível na tela
+function getCurrentSection() {
+  const scrollPosition = window.scrollY;
 
-  // Verifica qual seção está visível na tela
-  function getCurrentSection() {
-      const scrollPosition = content.scrollY;
+  for (const section of sections) {
+    const sectionTop = section.offsetTop;
+    const sectionBottom = sectionTop + section.offsetHeight;
 
-      for (const section of sections) {
-          const sectionTop = section.offsetTop;
-          const sectionBottom = sectionTop + section.offsetHeight;
-
-          // Verifica se a seção está visível na tela
-          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-              return section.id;
-          }
-      }
-
-      // Se nenhuma seção estiver visível, retorne null ou outro valor padrão
-      return null;
+    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+      return section.id;
+    }
   }
 
-  // Muda o atrubuto sempre que a seção estiver na tela
-  content.addEventListener('scroll', () => {
-    let currentSection = document.querySelector('div[data-current-section]');
-    currentSection.setAttribute('data-current-section', getCurrentSection());
-  });
+  return null;
+}
 
-  // // Função para tratar o evento de roda do mouse
-  // function handleWheelEvent(e) {
+const sections = document.querySelectorAll('.section-custom');
 
-  //   // Descobrir a direção do scroll
-  //   var delta = e.deltaY || e.detail || e.wheelDelta;
-  //   if (delta < 0) {
-  //   let currentSection = document.querySelector('div[data-current-section]');
-  //   // Scroll para cima
-  //   console.log("Scrolling up");
-  //   scrollDown(currentSection.getAttribute('data-current-section'), 200);
-  //   // Implementar a lógica para determinar o alvo da rolagem para cima
-  //   } else {
-  //   // Scroll para baixo
-  //   console.log("Scrolling down");
-  //   scrollDown(currentSection.getAttribute('data-current-section'), 200);
-  //   // Implementar a lógica para determinar o alvo da rolagem para baixo
-  //   }
-  // }
+// Evento de scroll para atualizar a seção atualmente visível
+window.addEventListener('scroll', () => {
+  const currentSection = document.querySelector('div[data-current-section]');
+  currentSection.setAttribute('data-current-section', getCurrentSection());
+});
 
-  // document.addEventListener('wheel', handleWheelEvent);
+// Evento de roda do mouse para rolar suavemente para a próxima seção
+function handleWheelEvent(e) {
+  const delta = e.deltaY || e.detail || e.wheelDelta;
+  const currentSection = document.querySelector('div[data-current-section]');
+  const currentSectionId = currentSection.getAttribute('data-current-section');
+  const nextSectionId = delta < 0 ? getPreviousSectionId(currentSectionId) : getNextSectionId(currentSectionId);
+  scrollSmooth(nextSectionId, 200);
+}
+
+document.addEventListener('wheel', handleWheelEvent);
+
+// Funções auxiliares para obter a próxima e a seção anterior
+function getNextSectionId(currentSectionId) {
+  const currentSectionIndex = Array.from(sections).findIndex(section => section.id === currentSectionId);
+  return sections[currentSectionIndex + 1] ? sections[currentSectionIndex + 1].id : currentSectionId;
+}
+
+function getPreviousSectionId(currentSectionId) {
+  const currentSectionIndex = Array.from(sections).findIndex(section => section.id === currentSectionId);
+  return sections[currentSectionIndex - 1] ? sections[currentSectionIndex - 1].id : currentSectionId;
+}
+
 
 
 /* ======================================
