@@ -107,59 +107,66 @@ function scrollDown(targetId, duration) {
   requestAnimationFrame(step);
 }
 
-// Captura as seções e suas posições
-const sections = Array.from(document.querySelectorAll('.section-custom')).map(section => {
-  return {
-    id: section.id,
-    offsetTop: section.offsetTop
-  };
-});
+// Evento de tirar link da URL mas manter funçao de Scroll ao clicar no 
+let linksMenu = document.querySelectorAll('nav a[data-target]');
+linksMenu.forEach(link => {
 
-// Event listener para links de navegação
-document.querySelectorAll('nav a[data-target]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
+  link.addEventListener('click', function (e) {
     e.preventDefault();
     const targetId = this.getAttribute('data-target');
     scrollDown(targetId, 200);
   });
+
 });
 
-// Função para tratar o evento de roda do mouse
-function handleWheelEvent(e) {
-  if (isScrolling) {
-    e.preventDefault();
-    return;
-  }
-  
-  const currentPosition = window.scrollY;
-  const delta = e.deltaY || e.detail || e.wheelDelta;
-  let targetSection;
+// Seletor para todas as seções do seu site
+const sections = document.querySelectorAll('.section-custom');
 
-  // Descobre se está rolando para cima ou para baixo e encontra a próxima seção
-  if (delta < 0) { // Rolando para cima
-    for (let i = sections.length - 1; i >= 0; i--) {
-      if (sections[i].offsetTop < currentPosition) {
-        targetSection = sections[i];
-        break;
-      }
-    }
-  } else { // Rolando para baixo
-    for (let i = sections.length + 1; i >= 0; i++) {
-      if (sections[i].offsetTop > currentPosition + window.innerHeight) {
-        targetSection = sections[i];
-        break;
-      }
-    }
-  }
+// Função para verificar qual seção está visível na tela
+function getCurrentSection() {
+    const scrollPosition = window.scrollY;
 
-  // Se houver uma seção alvo, rola até ela
-  if (targetSection) {
-    e.preventDefault();
-    scrollDown(targetSection.id, 200);
-  }
+    for (const section of sections) {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        // Verifica se a seção está visível na tela
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            return section.id;
+        }
+    }
+
+    // Se nenhuma seção estiver visível, retorne null ou outro valor padrão
+    return null;
 }
 
-// Adiciona o event listener para o evento de 'wheel'
-document.addEventListener('wheel', handleWheelEvent);
+// Exemplo de uso: atualize o menu ou faça outras ações com base na seção atual
+window.addEventListener('scroll', () => {
+    let currentSection = document.querySelector('div[data-current-section]');
+    currentSection.setAttribute('data-current-section', getCurrentSection());
+    console.log('Seção atual:', getCurrentSection());
+});
+
+
+
+  // Função para tratar o evento de roda do mouse
+  function handleWheelEvent(e) {
+
+    // Descobrir a direção do scroll
+    var delta = e.deltaY || e.detail || e.wheelDelta;
+    if (delta < 0) {
+    let currentSection = document.querySelector('div[data-current-section]');
+    // Scroll para cima
+    console.log("Scrolling up");
+    scrollDown(currentSection, 200);
+    // Implementar a lógica para determinar o alvo da rolagem para cima
+    } else {
+    // Scroll para baixo
+    console.log("Scrolling down");
+    scrollDown(currentSection, 200);
+    // Implementar a lógica para determinar o alvo da rolagem para baixo
+    }
+}
+
 
   

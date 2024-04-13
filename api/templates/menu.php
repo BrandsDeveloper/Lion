@@ -13,7 +13,7 @@
 <ul>
     <?php 
     foreach ($args as $link => $title) :
-        echo '<li> <a href="#'.$link.'" data-target="'.$link.'"> '.$title.' </a> </li>';
+        echo '<li> <a data-target="'.$link.'"> '.$title.' </a> </li>';
     endforeach; 
     ?>
 </ul>
