@@ -86,27 +86,36 @@ window.addEventListener('scroll', () => {
   currentSection.setAttribute('data-current-section', getCurrentSection());
 });
 
-// Evento de roda do mouse para rolar suavemente para a próxima seção
-function handleWheelEvent(e) {
-  const delta = e.deltaY || e.detail || e.wheelDelta;
+// Função para rolar suavemente para a próxima seção
+function scrollNextSection() {
   const currentSection = document.querySelector('div[data-current-section]');
   const currentSectionId = currentSection.getAttribute('data-current-section');
-  const nextSectionId = delta < 0 ? getPreviousSectionId(currentSectionId) : getNextSectionId(currentSectionId);
+  const nextSectionId = getNextSectionId(currentSectionId);
   scrollSmooth(nextSectionId, 200);
 }
 
-document.addEventListener('wheel', handleWheelEvent);
-
-// Funções auxiliares para obter a próxima e a seção anterior
+// Função auxiliar para obter a próxima seção
 function getNextSectionId(currentSectionId) {
   const currentSectionIndex = Array.from(sections).findIndex(section => section.id === currentSectionId);
   return sections[currentSectionIndex + 1] ? sections[currentSectionIndex + 1].id : currentSectionId;
 }
 
-function getPreviousSectionId(currentSectionId) {
-  const currentSectionIndex = Array.from(sections).findIndex(section => section.id === currentSectionId);
-  return sections[currentSectionIndex - 1] ? sections[currentSectionIndex - 1].id : currentSectionId;
-}
+// Evento de scroll para rolar suavemente para a próxima seção ao rolar para baixo
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.body.clientHeight;
+
+  // Se estiver perto do final da página, não rolar para a próxima seção
+  if (scrollPosition + windowHeight >= documentHeight - 100) return;
+
+  // Se estiver rolando para baixo, role suavemente para a próxima seção
+  if (!isScrolling && scrollPosition > lastScrollTop) {
+    scrollNextSection();
+  }
+  lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition;
+});
+
 
 
 
