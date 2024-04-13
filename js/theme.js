@@ -17,7 +17,9 @@ content.onscroll = function() {
     SCROLL MENU E SCROLL SECTIONS
 ====================================== */
 
+// Variáveis para controlar a rolagem
 let isScrolling = false;
+let lastScrollTop = 0;
 
 // Função de rolagem suave
 function scrollSmooth(targetId, duration) {
@@ -78,6 +80,7 @@ function getCurrentSection() {
   return null;
 }
 
+// Lista de seções
 const sections = document.querySelectorAll('.section-custom');
 
 // Evento de scroll para atualizar a seção atualmente visível
@@ -91,13 +94,13 @@ function scrollNextSection() {
   const currentSection = document.querySelector('div[data-current-section]');
   const currentSectionId = currentSection.getAttribute('data-current-section');
   const nextSectionId = getNextSectionId(currentSectionId);
-  scrollSmooth(nextSectionId, 200);
+  if (nextSectionId) scrollSmooth(nextSectionId, 200);
 }
 
 // Função auxiliar para obter a próxima seção
 function getNextSectionId(currentSectionId) {
   const currentSectionIndex = Array.from(sections).findIndex(section => section.id === currentSectionId);
-  return sections[currentSectionIndex + 1] ? sections[currentSectionIndex + 1].id : currentSectionId;
+  return sections[currentSectionIndex + 1] ? sections[currentSectionIndex + 1].id : null;
 }
 
 // Evento de scroll para rolar suavemente para a próxima seção ao rolar para baixo
@@ -115,6 +118,7 @@ window.addEventListener('scroll', () => {
   }
   lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition;
 });
+
 
 
 
