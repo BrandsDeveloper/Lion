@@ -10,8 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "animate.css": "^4.1.1",
-    "bootstrap": "^5.3.3",
-    "fullpage.js": "^4.0.22"
+    "bootstrap": "^5.3.3"
   },
   "devDependencies": {
     "gulp": "^4.0.2",

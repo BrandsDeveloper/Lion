@@ -119,35 +119,32 @@ linksMenu.forEach(link => {
 
 });
 
-// Seletor para todas as seções do seu site
-const sections = document.querySelectorAll('.section-custom');
+  // Seletor para todas as seções do seu site
+  const sections = document.querySelectorAll('.section-custom');
 
-// Função para verificar qual seção está visível na tela
-function getCurrentSection() {
-    const scrollPosition = window.scrollY;
+  // Verifica qual seção está visível na tela
+  function getCurrentSection() {
+      const scrollPosition = window.scrollY;
 
-    for (const section of sections) {
-        const sectionTop = section.offsetTop;
-        const sectionBottom = sectionTop + section.offsetHeight;
+      for (const section of sections) {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
 
-        // Verifica se a seção está visível na tela
-        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-            return section.id;
-        }
-    }
+          // Verifica se a seção está visível na tela
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+              return section.id;
+          }
+      }
 
-    // Se nenhuma seção estiver visível, retorne null ou outro valor padrão
-    return null;
-}
+      // Se nenhuma seção estiver visível, retorne null ou outro valor padrão
+      return null;
+  }
 
-// Exemplo de uso: atualize o menu ou faça outras ações com base na seção atual
-window.addEventListener('scroll', () => {
+  // Muda o atrubuto sempre que a seção estiver na tela
+  window.addEventListener('scroll', () => {
     let currentSection = document.querySelector('div[data-current-section]');
     currentSection.setAttribute('data-current-section', getCurrentSection());
-    console.log('Seção atual:', getCurrentSection());
-});
-
-
+  });
 
   // Função para tratar o evento de roda do mouse
   function handleWheelEvent(e) {
@@ -158,15 +155,15 @@ window.addEventListener('scroll', () => {
     let currentSection = document.querySelector('div[data-current-section]');
     // Scroll para cima
     console.log("Scrolling up");
-    scrollDown(currentSection, 200);
+    scrollDown(currentSection.getAttribute(), 200);
     // Implementar a lógica para determinar o alvo da rolagem para cima
     } else {
     // Scroll para baixo
     console.log("Scrolling down");
-    scrollDown(currentSection, 200);
+    scrollDown(currentSection.getAttribute(), 200);
     // Implementar a lógica para determinar o alvo da rolagem para baixo
     }
-}
+  }
 
 
   

@@ -13,8 +13,6 @@ const notify = require('gulp-notify');
 // Source Path
 var js_src = [
     "./node_modules/bootstrap/dist/js/bootstrap.js",
-    "./node_modules/fullpage.js/dist/fullpage.js",
-    "./node_modules/fullpage.js/vendors/easings.js",
 ];
 
 var css_src = [
@@ -29,7 +27,7 @@ function concatScripts() {
         .pipe(plumber())
         .pipe(uglify())
         .pipe(concat('plugins.js'))
-        .pipe(rename({suffix: '.min'}))
+        // .pipe(rename())
         .pipe(gulp.dest('./js'))
         .pipe(notify({ message: 'JS concatenado e minificado com sucesso' }));
 };
