@@ -13,62 +13,63 @@ content.onscroll = function() {
     }
 };
 
+
 /* ======================================
     SCROLL MENU E SCROLL SECTIONS
 ====================================== */
 
 let isScrolling = false;
 
-  // Função de rolagem suave
-  function scrollDown(targetId, duration) {
-    if (isScrolling) return; // Não inicia uma nova rolagem se já estiver rolando
-    isScrolling = true;
-    var to = document.getElementById(targetId);
-    var to_position = to.getBoundingClientRect().top + window.scrollTop;
-    var start_position = window.scrollTop;
-    var distance_to_position = to_position - start_position;
-    var start = null;
+// Função de rolagem suave
+// function scrollDown(targetId, duration) {
+//   if (isScrolling) return; // Não inicia uma nova rolagem se já estiver rolando
+//   isScrolling = true;
+//   var to = document.getElementById(targetId);
+//   var to_position = to.getBoundingClientRect().top + window.pageYOffset;
+//   var start_position = window.pageYOffset;
+//   var distance_to_position = to_position - start_position;
+//   var start = null;
 
-    function step(timestamp) {
-      var progress;
-      if (start === null) start = timestamp;
-      progress = timestamp - start;
-      window.scrollTo(0, smooth(progress, start_position, distance_to_position, duration));
-      if (progress < duration) {
-        requestAnimationFrame(step);
-      } else {
-        isScrolling = false; // Resseta a flag quando a animação termina
-      }
-    }
+//   function step(timestamp) {
+//     var progress;
+//     if (start === null) start = timestamp;
+//     progress = timestamp - start;
+//     window.scrollTo(0, smooth(progress, start_position, distance_to_position, duration));
+//     if (progress < duration) {
+//       requestAnimationFrame(step);
+//     } else {
+//       isScrolling = false; // Resseta a flag quando a animação termina
+//     }
+//   }
 
-    function smooth(t, b, c, d) {
-      t /= d / 2;
-      if (t < 1) return c / 2 * t * t + b;
-      t--;
-      return -c / 2 * (t * (t - 2) - 1) + b;
-    }
+//   function smooth(t, b, c, d) {
+//     t /= d / 2;
+//     if (t < 1) return c / 2 * t * t + b;
+//     t--;
+//     return -c / 2 * (t * (t - 2) - 1) + b;
+//   }
 
-    requestAnimationFrame(step);
-  }
+//   requestAnimationFrame(step);
+// }
 
-  // Evento de tirar link da URL mas manter funçao de Scroll ao clicar no 
-  let linksMenu = document.querySelectorAll('nav a[data-target]');
-  linksMenu.forEach(link => {
+// Evento de tirar link da URL mas manter funçao de Scroll ao clicar no 
+let linksMenu = document.querySelectorAll('nav a[data-target]');
+linksMenu.forEach(link => {
 
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('data-target');
-      scrollDown(targetId, 200);
-    });
-
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('data-target');
+    targetId.scrollIntoView({ behavior: "smooth" });
   });
+
+});
 
   // Seletor para todas as seções do seu site
   const sections = document.querySelectorAll('.section-custom');
 
   // Verifica qual seção está visível na tela
   function getCurrentSection() {
-      const scrollPosition = window.scrollTop;
+      const scrollPosition = window.scrollY;
 
       for (const section of sections) {
           const sectionTop = section.offsetTop;
@@ -80,34 +81,15 @@ let isScrolling = false;
           }
       }
 
+      // Se nenhuma seção estiver visível, retorne null ou outro valor padrão
       return null;
   }
 
-  // Muda o atributo sempre que a seção estiver na tela
+  // Muda o atrubuto sempre que a seção estiver na tela
   window.addEventListener('scroll', () => {
     let currentSection = document.querySelector('div[data-current-section]');
     currentSection.setAttribute('data-current-section', getCurrentSection());
   });
-
-  // // Função para tratar o evento de roda do mouse
-  // function handleWheelEvent(e) {
-    
-  //   let currentSection = document.querySelector('div[data-current-section]');
-  //   var delta = e.deltaY || e.detail || e.wheelDelta;
-  //   if (delta < 0) {
-  //     currentSection.getAttribute('data-current-section').scrollIntoView({ behavior: "smooth" });
-  //   } else {
-  //     currentSection.getAttribute('data-current-section').scrollIntoView({ behavior: "smooth" });
-  //   }
-
-  // }
-
-  // setTimeout(() => {
-    
-  //   document.addEventListener('scroll', handleWheelEvent);
-
-  // }, 1000);
-
 
 /* ======================================
     AJAX ENVIO DE FORMS
@@ -168,6 +150,8 @@ btn.addEventListener('click', () =>{
     console.log(ajax);
 
 });
+
+  
 
 
   
