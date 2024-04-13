@@ -17,110 +17,100 @@ content.onscroll = function() {
     SCROLL MENU E SCROLL SECTIONS
 ====================================== */
 
-// Variáveis para controlar a rolagem
 let isScrolling = false;
-let lastScrollTop = 0;
 
-// Função de rolagem suave
-function scrollSmooth(targetId, duration) {
-  if (isScrolling) return;
-  isScrolling = true;
+  // Função de rolagem suave
+  function scrollDown(targetId, duration) {
+    if (isScrolling) return; // Não inicia uma nova rolagem se já estiver rolando
+    isScrolling = true;
+    var to = document.getElementById(targetId);
+    var to_position = to.getBoundingClientRect().top + window.scrollTop;
+    var start_position = window.scrollTop;
+    var distance_to_position = to_position - start_position;
+    var start = null;
 
-  const targetSection = document.getElementById(targetId);
-  const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
-  const startPosition = window.pageYOffset;
-  const distanceToPosition = targetPosition - startPosition;
-  let start = null;
-
-  function step(timestamp) {
-    if (!start) start = timestamp;
-    const progress = timestamp - start;
-    window.scrollTo(0, smooth(progress, startPosition, distanceToPosition, duration));
-
-    if (progress < duration) {
-      requestAnimationFrame(step);
-    } else {
-      isScrolling = false;
+    function step(timestamp) {
+      var progress;
+      if (start === null) start = timestamp;
+      progress = timestamp - start;
+      window.scrollTo(0, smooth(progress, start_position, distance_to_position, duration));
+      if (progress < duration) {
+        requestAnimationFrame(step);
+      } else {
+        isScrolling = false; // Resseta a flag quando a animação termina
+      }
     }
+
+    function smooth(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(step);
   }
 
-  requestAnimationFrame(step);
-}
+  // Evento de tirar link da URL mas manter funçao de Scroll ao clicar no 
+  let linksMenu = document.querySelectorAll('nav a[data-target]');
+  linksMenu.forEach(link => {
 
-function smooth(t, b, c, d) {
-  t /= d / 2;
-  if (t < 1) return c / 2 * t * t + b;
-  t--;
-  return -c / 2 * (t * (t - 2) - 1) + b;
-}
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('data-target');
+      scrollDown(targetId, 200);
+    });
 
-// Evento de clique nos links do menu para rolar suavemente para a seção correspondente
-const linksMenu = document.querySelectorAll('nav a[data-target]');
-linksMenu.forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('data-target');
-    scrollSmooth(targetId, 200);
   });
-});
 
-// Função para determinar qual seção está atualmente visível na tela
-function getCurrentSection() {
-  const scrollPosition = window.scrollY;
+  // Seletor para todas as seções do seu site
+  const sections = document.querySelectorAll('.section-custom');
 
-  for (const section of sections) {
-    const sectionTop = section.offsetTop;
-    const sectionBottom = sectionTop + section.offsetHeight;
+  // Verifica qual seção está visível na tela
+  function getCurrentSection() {
+      const scrollPosition = window.scrollTop;
 
-    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-      return section.id;
+      for (const section of sections) {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
+
+          // Verifica se a seção está visível na tela
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+              return section.id;
+          }
+      }
+
+      // Se nenhuma seção estiver visível, retorne null ou outro valor padrão
+      return null;
+  }
+
+  // Muda o atrubuto sempre que a seção estiver na tela
+  window.addEventListener('scroll', () => {
+    let currentSection = document.querySelector('div[data-current-section]');
+    currentSection.setAttribute('data-current-section', getCurrentSection());
+  });
+
+  // Função para tratar o evento de roda do mouse
+  function handleWheelEvent(e) {
+
+    var delta = e.deltaY || e.detail || e.wheelDelta;
+    if (delta < 0) {
+
+      let currentSection = document.querySelector('div[data-current-section]');
+      console.log("Scrolling up");
+      currentSection.getAttribute('data-current-section').scrollIntoView({ behavior: "smooth" });
+
+    } else {
+      currentSection.getAttribute('data-current-section').scrollIntoView({ behavior: "smooth" });
     }
+    
   }
 
-  return null;
-}
+  setTimeout(() => {
+    
+    document.addEventListener('scroll', handleWheelEvent);
 
-// Lista de seções
-const sections = document.querySelectorAll('.section-custom');
-
-// Evento de scroll para atualizar a seção atualmente visível
-window.addEventListener('scroll', () => {
-  const currentSection = document.querySelector('div[data-current-section]');
-  currentSection.setAttribute('data-current-section', getCurrentSection());
-});
-
-// Função para rolar suavemente para a próxima seção
-function scrollNextSection() {
-  const currentSection = document.querySelector('div[data-current-section]');
-  const currentSectionId = currentSection.getAttribute('data-current-section');
-  const nextSectionId = getNextSectionId(currentSectionId);
-  if (nextSectionId) scrollSmooth(nextSectionId, 200);
-}
-
-// Função auxiliar para obter a próxima seção
-function getNextSectionId(currentSectionId) {
-  const currentSectionIndex = Array.from(sections).findIndex(section => section.id === currentSectionId);
-  return sections[currentSectionIndex + 1] ? sections[currentSectionIndex + 1].id : null;
-}
-
-// Evento de scroll para rolar suavemente para a próxima seção ao rolar para baixo
-window.addEventListener('scroll', () => {
-  const scrollPosition = window.scrollY;
-  const windowHeight = window.innerHeight;
-  const documentHeight = document.body.clientHeight;
-
-  // Se estiver perto do final da página, não rolar para a próxima seção
-  if (scrollPosition + windowHeight >= documentHeight - 100) return;
-
-  // Se estiver rolando para baixo, role suavemente para a próxima seção
-  if (!isScrolling && scrollPosition > lastScrollTop) {
-    scrollNextSection();
-  }
-  lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition;
-});
-
-
-
+  }, 1000);
 
 
 /* ======================================
