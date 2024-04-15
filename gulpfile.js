@@ -13,11 +13,15 @@ const notify = require('gulp-notify');
 // Source Path
 var js_src = [
     "./node_modules/bootstrap/dist/js/bootstrap.js",
+    "./node_modules/bs5-lightbox/dist/index.bundle.min.js",
+    "./node_modules/swiper/swiper-bundle.min.js",
 ];
 
 var css_src = [
     'src/sass/**/*.scss',
     './node_modules/animate.css/animate.min.css',
+    "./node_modules/swiper/swiper-bundle.min.css",
+
 ];
  
 // Minify e Concat Scripts

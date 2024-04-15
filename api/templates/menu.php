@@ -2,9 +2,9 @@
     $args = array(
         'sobre' => 'Sobre',
         'jornada' => 'Jornada',
-        'serviços' => 'Serviços',
+        'servicos' => 'Serviços',
         'programas' => 'Programas',
-        'portfólio' => 'Portfólio',
+        'portfolio' => 'Portfólio',
         'feedback' => 'Feedback',
         'contato' => 'Contato'
     );

@@ -11,17 +11,17 @@
                     <div class="col-lg-7">
                         <div class="row gy-4">
                             <div class="col-md-6">
-                                <a href="#" class="c-card-project rounded-5">
+                                <a href="<?= $url; ?>/img/project_01.png" class="c-card-project rounded-5" data-toggle="lightbox" data-caption="Project 01">
                                     <img src="<?= $url; ?>/img/project_01.png" alt="project_01" class="c-card-project__image">
                                 </a>
                             </div>
                             <div class="col-md-6">
-                                <a href="#" class="c-card-project rounded-5">
+                            <a href="<?= $url; ?>/img/project_02.png" class="c-card-project rounded-5" data-toggle="lightbox" data-caption="Project 02">
                                     <img src="<?= $url; ?>/img/project_02.png" alt="project_02" class="c-card-project__image">
                                 </a>
                             </div>
                             <div class="col-12">
-                                <a href="#" class="c-card-project rounded-5">
+                            <a href="<?= $url; ?>/img/project_03.png" class="c-card-project rounded-5" data-toggle="lightbox" data-caption="Project 03">
                                     <img src="<?= $url; ?>/img/project_03.png" alt="project_03" class="c-card-project__image">
                                 </a>
                             </div>

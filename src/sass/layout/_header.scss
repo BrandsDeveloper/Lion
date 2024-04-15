@@ -11,6 +11,10 @@
         margin: 0;
 
         li{
+
+            .current{
+                color: $primary;
+            }
             
             a{
                 border-right: 2px solid $light;
