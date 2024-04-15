@@ -88,14 +88,17 @@ linksMenu.forEach(link => {
   // Muda o atrubuto sempre que a seção estiver na tela
   window.addEventListener('scroll', () => {
 
-    let currentSection = document.querySelector('div[data-current-section]');
-    let currentLink = document.querySelector('a[data-target]');
-    currentSection.setAttribute('data-current-section', getCurrentSection());
+    let section = document.querySelector('div[data-current-section]');
+    let Links = document.querySelectorAll('a[data-target]');
+    section.setAttribute('data-current-section', getCurrentSection());
 
-    if( currentSection == currentLink){
-      currentLink.classList.add('current');
-    }else{
-      currentLink.classList.remove('current');
+    for ( const link of Links) {
+
+        if( section.getAttribute('data-current-section') == link.getAttribute('data-target')) {
+            link.classList.add('current');
+        }else{
+            link.classList.remove('current');
+        }
     }
 
   });

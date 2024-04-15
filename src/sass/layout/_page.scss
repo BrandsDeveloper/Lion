@@ -112,6 +112,26 @@
     }
 }
 
+#jornada{
+
+    .line-time{
+
+        ul{
+            position: relative;
+
+            &::before {
+                content: '';
+                height: 100%;
+                width: 1px;
+                background: #fff;
+                position: absolute;
+                left: 17px;
+                top: 9px;
+            }
+        }
+    }
+}
+
 #contato{
 
     label{
