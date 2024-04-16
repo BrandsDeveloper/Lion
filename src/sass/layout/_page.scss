@@ -169,27 +169,37 @@
 
         .prog{        
             position: absolute;
-            color: white;
             right: 0;
             
             span{
+                color: white;
                 font-size: 12px;
+                
+                &::before {
+                    content: '';
+                    display:block;
+                    position: absolute;
+                    top: 8px;
+                    right: -25px;
+                    background: #fff;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 100%;
+                }
             }
 
-            &.react {
-                top: 20px;
-                right: 35%;
+            img {
+                width: 80px;
+                position: absolute;
+                filter: grayscale(1);
             }
-            
-            &.framer {
-                top: 56px;
-                right: 21%;
-            }
-            
-            &.webflow{
-                top: 110px;
-                right: 11%;
-            }
+
+            &.react { top: 10%; right: 20%; }
+            &.framer { top: 23%; right: 10%; }
+            &.webflow { top: 36%; right: 5%; }
+            &.figma { bottom: 36%; right: 5%; }
+            &.wordpress { bottom: 23%; right: 10%; }
+            &.laravel { bottom: 10%; right: 20%; }
             
         }
         
