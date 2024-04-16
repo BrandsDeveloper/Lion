@@ -161,7 +161,10 @@
             position: absolute;
             color: white;
             right: 0;
-            font-size: 12px;
+            
+            span{
+                font-size: 12px;
+            }
 
             &.react {
                 top: 20px;

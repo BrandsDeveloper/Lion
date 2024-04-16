@@ -20,23 +20,12 @@
                                 <img src="<?= $url; ?>/img/project_03.png" alt="project_03" class="c-card-project__image">
                             </a>
                         </div>
-                        <div class="row d-none">
-                            <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                                <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
-                            </a>
-                            <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                                <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
-                            </a>
-                            <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-                                <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
-                            </a>
-                        </div>
                     </div>
 
 
                 </div>
             </div>
-            <div class="col-lg-auto opacity-50">
+            <div class="d-none d-lg-block col-lg-auto opacity-50">
                 <?php include 'card.php'; ?>
             </div>
         </div>
