@@ -125,8 +125,12 @@
                 width: 1px;
                 background: #fff;
                 position: absolute;
-                left: 17px;
-                top: 9px;
+                left: 10px;
+                top: 22px;
+            }
+
+            li::marker {
+                font-size: 30px;
             }
         }
     }
