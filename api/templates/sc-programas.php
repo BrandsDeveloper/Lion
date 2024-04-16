@@ -10,27 +10,27 @@
                     <div class="circle">
                         <div class="prog"> 
                             <span class="react"> React </span>
-                            <img src="icon.png" alt="react">
+                            <img src="<?= $url; ?>/img/icon-react.png" width="40" alt="react">
                         </div>
                         <div class="prog"> 
                             <span class="framer"> Framer </span>
-                            <img src="icon.png" alt="framer">
+                            <img src="<?= $url; ?>/img/icon-react.png" width="40" alt="framer">
                         </div>
                         <div class="prog"> 
                             <span class="webflow"> WebFlow </span>
-                            <img src="icon.png" alt="webflow">
+                            <img src="<?= $url; ?>/img/icon-react.png" width="40" alt="webflow">
                         </div>
                         <div class="prog"> 
                             <span class="figma"> Figma </span>
-                            <img src="icon.png" alt="figma">
+                            <img src="<?= $url; ?>/img/icon-react.png" width="40" alt="figma">
                         </div>
                         <div class="prog"> 
                             <span class="wordpress"> WordPress </span>
-                            <img src="icon.png" alt="wordpress">
+                            <img src="<?= $url; ?>/img/icon-react.png" width="40" alt="wordpress">
                         </div>
                         <div class="prog"> 
                             <span class="laravel"> Laravel/PHP </span>
-                            <img src="icon.png" alt="laravel">
+                            <img src="<?= $url; ?>/img/icon-react.png" width="40" alt="laravel">
                         </div>
                     </div>
                 </div>
