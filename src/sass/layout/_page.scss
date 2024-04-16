@@ -147,6 +147,46 @@
 
 }
 
+#programas{
+
+    .circle{
+        position: relative;
+        width: 70%;
+        height: 570px;
+        border: 1px solid white;
+        border-radius: 50%;
+        right: 36%;
+
+        .prog{        
+            position: absolute;
+            color: white;
+            right: 0;
+            font-size: 12px;
+
+            &.react {
+                top: 20px;
+                right: 35%;
+            }
+
+            &.framer {
+                top: 56px;
+                right: 21%;
+            }
+
+            &.webflow{
+                top: 110px;
+                right: 11%;
+            }
+
+
+        }
+
+
+        
+    }
+
+}
+
 #contato{
 
     label{

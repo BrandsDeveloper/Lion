@@ -64,8 +64,8 @@ linksMenu.forEach(link => {
 
 });
 
-  // Seletor para todas as seções do seu site
-  const sections = document.querySelectorAll('.section-custom');
+
+  const sections = document.querySelectorAll('.sc-container');
 
   // Verifica qual seção está visível na tela
   function getCurrentSection() {
@@ -81,11 +81,11 @@ linksMenu.forEach(link => {
           }
       }
 
-      // Se nenhuma seção estiver visível, retorne null ou outro valor padrão
+      // Se nenhuma seção estiver visível, retorne null
       return null;
   }
 
-  // Muda o atrubuto sempre que a seção estiver na tela
+  // Muda o atrubuto sempre que a seção estiver na tela e ativa o current no menu
   window.addEventListener('scroll', () => {
 
     let section = document.querySelector('div[data-current-section]');
