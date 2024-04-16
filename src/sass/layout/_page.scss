@@ -110,6 +110,16 @@
             left: 181px;
         }
     }
+    
+    @include media-breakpoint-down(sm){
+        .display-custom{
+            font-size: 7rem;
+        }
+        .fs-home{
+            left: 123px;
+            top: 8%;
+        }
+    }
 }
 
 #jornada{

@@ -42,14 +42,14 @@ $url = 'https://'.$_SERVER["HTTP_HOST"];
     <div class="container py-5">
 
         <nav class="menu">
-            <div class="row align-items-center">
-                <div class="col-lg-auto">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-auto">
                     <a href="<?= $url; ?>" title="" class="link-primary text-decoration-none"> Home </a>
                 </div>
                 <div class="col-lg-auto mx-auto d-none d-lg-block">
                     <?php include 'templates/menu.php'; ?>
                 </div>
-                <div class="col-lg-auto">
+                <div class="col-auto">
                     <i class="fa-solid fa-magnifying-glass fs-4"></i>
                 </div>
             </div>
