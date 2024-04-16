@@ -1,4 +1,4 @@
-<section class="section-custom section" id="contato">
+<section class="sc-container" id="contato">
     <div class="border-animate w-100"> </div>
     <div class="container">
         <div class="row justify-content-between">

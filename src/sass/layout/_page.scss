@@ -4,7 +4,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-.section-custom{
+.sc-container{
     position: relative;
     height: 100vh;
     display: flex;
@@ -133,6 +133,12 @@
                 font-size: 30px;
             }
         }
+    }
+}
+
+#servico{
+    .rounded-50{
+        border-radius: 50px;
     }
 }
 

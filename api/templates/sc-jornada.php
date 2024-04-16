@@ -1,4 +1,4 @@
-<section class="section-custom section" id="jornada">
+<section class="sc-container" id="jornada">
     <div class="border-animate w-100"> </div>
     <div class="container">
         <div class="row justify-content-between">
