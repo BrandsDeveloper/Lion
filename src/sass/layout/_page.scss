@@ -136,10 +136,15 @@
     }
 }
 
-#servico{
-    .rounded-50{
-        border-radius: 50px;
+#servicos{
+
+    .cards-servicos{
+
+        .rounded-50{
+            border-radius: 70px 150px 150px 70px;
+        }
     }
+
 }
 
 #contato{
