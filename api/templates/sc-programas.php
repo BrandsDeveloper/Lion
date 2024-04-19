@@ -10,27 +10,27 @@
                     <div class="circle">
                         <div class="prog react"> 
                             <span> React </span>
-                            <img src="<?= $url; ?>/img/icon-react.png" width="40" alt="react">
+                            <img src="<?= $url; ?>/img/react.png" width="40" alt="react">
                         </div>
                         <div class="prog framer"> 
                             <span> Framer </span>
-                            <img src="<?= $url; ?>/img/icon-react.png" width="40" alt="framer">
+                            <img src="<?= $url; ?>/img/framer.png" width="40" alt="framer">
                         </div>
                         <div class="prog webflow"> 
                             <span> WebFlow </span>
-                            <img src="<?= $url; ?>/img/icon-react.png" width="40" alt="webflow">
+                            <img src="<?= $url; ?>/img/webflow.png" width="40" alt="webflow">
                         </div>
                         <div class="prog figma"> 
                             <span> Figma </span>
-                            <img src="<?= $url; ?>/img/icon-react.png" width="40" alt="figma">
+                            <img src="<?= $url; ?>/img/figma.png" width="40" alt="figma">
                         </div>
                         <div class="prog wordpress"> 
                             <span> WordPress </span>
-                            <img src="<?= $url; ?>/img/icon-react.png" width="40" alt="wordpress">
+                            <img src="<?= $url; ?>/img/wordpress.png" width="40" alt="wordpress">
                         </div>
                         <div class="prog laravel"> 
                             <span> Laravel/PHP </span>
-                            <img src="<?= $url; ?>/img/icon-react.png" width="40" alt="laravel">
+                            <img src="<?= $url; ?>/img/laravel.png" width="40" alt="laravel">
                         </div>
                     </div>
                 </div>
