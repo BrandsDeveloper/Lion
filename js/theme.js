@@ -17,22 +17,23 @@ content.onscroll = function() {
     MOUSE MAGNECT IMG PROG
 ====================================== */
 
-let imgHover = document.querySelectorAll(".prog");
-imgHover.forEach( function(img){
-    
-    img.addEventListener('mouseover', (e) => {
+let imageProg = document.querySelectorAll(".prog img");
+
+imageProg.forEach( (image) => {
+
+    image.addEventListener('mousemove', (e) => {
         let x = e.offsetX;
         let y = e.offsetY;
-        let BoxWidth = e.clientWidth;
-        let BoxHeight = e.clientHeight;
-        let moveX = (x - BoxWidth/2);
-        let moveY = (y - BoxHeight/2);
+        let imgWidth = image.clientWidth;
+        let imgHeight = image.clientHeight;
+        let moveX = (x - imgWidth/2);
+        let moveY = (y - imgHeight/2);
 
-        img.style.transform = `transformX(${moveX}px) transformY(${moveY}px)`
+        image.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
     })
 
-    img.addEventListener('mouseout', (e) => {
-        img.style.transform = '';
+    image.addEventListener('mouseout', (e) => {
+        image.style.transform = '';
     })
 })
 
