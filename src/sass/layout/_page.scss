@@ -192,7 +192,7 @@
                 width: 80px;
                 position: absolute;
                 filter: grayscale(1);
-                transition: all .3s ease;
+                transition: all .3s ease-out;
             }
 
             &.react { top: 5%; right: 27%; img{ bottom: 9px; left: 35px; }}
