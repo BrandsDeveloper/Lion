@@ -18,7 +18,7 @@
                         </div>
                         <div class="prog webflow"> 
                             <span> WebFlow </span>
-                            <img src="<?= $url; ?>/img/webflow.png" width="40" alt="webflow">
+                            <img src="<?= $url; ?>/img/web.png" width="40" alt="webflow">
                         </div>
                         <div class="prog figma"> 
                             <span> Figma </span>
