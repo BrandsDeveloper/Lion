@@ -161,11 +161,11 @@
 
     .circle{
         position: relative;
-        width: 70%;
-        height: 570px;
-        border: 1px solid white;
-        border-radius: 50%;
-        right: 36%;
+        width: 550px;
+        height: 550px;
+        border: 1px solid #fff;
+        border-radius: 1000px;
+        right: 270px;
 
         .prog{        
             position: absolute;
@@ -194,12 +194,12 @@
                 filter: grayscale(1);
             }
 
-            &.react { top: 10%; right: 20%; }
-            &.framer { top: 23%; right: 10%; }
-            &.webflow { top: 36%; right: 5%; }
-            &.figma { bottom: 36%; right: 5%; }
-            &.wordpress { bottom: 23%; right: 10%; }
-            &.laravel { bottom: 10%; right: 20%; }
+            &.react { top: 5%; right: 27%; img{ bottom: 9px; left: 35px; }}
+            &.framer { top: 15%; right: 15%; img{ bottom: 6px; left: 48px; }}
+            &.webflow { top: 27%; right: 8%; img{ bottom: -10px; left: 75px; }} 
+            &.figma { bottom: 36%; right: 5%; img{ bottom: -15px; left: 55px; }}
+            &.wordpress { bottom: 23%; right: 10%; img{ bottom: 10px; left: 40px; }}
+            &.laravel { bottom: 10%; right: 20%; img{ bottom: 10px; left: 40px; }}
             
         }
         
