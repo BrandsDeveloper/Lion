@@ -13,6 +13,28 @@ content.onscroll = function() {
     }
 };
 
+/* ======================================
+    MOUSE MAGNECT IMG PROG
+====================================== */
+
+let imgHover = document.querySelectorAll(".prog");
+imgHover.forEach( function(img){
+    
+    img.addEventListener('mouseover', (e) => {
+        let x = e.offsetX;
+        let y = e.offsetY;
+        let BoxWidth = e.clientWidth;
+        let BoxHeight = e.clientHeight;
+        let moveX = (x - BoxWidth/2);
+        let moveY = (y - BoxHeight/2);
+
+        img.style.transform = `transformX(${moveX}px) transformY(${moveY}px)`
+    })
+
+    img.addEventListener('mouseout', (e) => {
+        img.style.transform = '';
+    })
+})
 
 /* ======================================
     SCROLL MENU E SCROLL SECTIONS

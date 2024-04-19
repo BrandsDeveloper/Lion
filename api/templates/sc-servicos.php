@@ -11,7 +11,7 @@
                             <p class="small opacity-50">Idealizo e desenvolvo estéticas únicas para produtos e marcas digitais usando Figma e Frame.</p>
                             <button class="btn fw-lighter opacity-50 p-0 text-primary"> + Meus projetos</button>
                         </div>
-                        <div class="my-4 ms-5 rounded-50 border border-light p-4 pe-5">
+                        <div class="my-4 ms-md-5 rounded-50 border border-light p-4 pe-5">
                             <h2 class="fw-light">Desenvolvedor [dev]</h2>
                             <p class="small opacity-50">Constuo Layouts únicos para site que vão ao ar com Framer Webflow ou WordPress.</p>
                             <button class="btn fw-lighter opacity-50 p-0 text-primary"> + Meus projetos</button>

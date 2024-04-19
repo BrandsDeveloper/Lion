@@ -10,15 +10,25 @@
 
                     <div class="col-lg-7">
                         <div class="row gy-4">
-                            <a href="<?= $url; ?>/img/project_01.png" data-toggle="lightbox" data-gallery="example-gallery" class="c-card-project rounded-5 col-md-6">
-                                <img src="<?= $url; ?>/img/project_01.png" alt="project_01" class="c-card-project__image">
-                            </a>
-                            <a href="<?= $url; ?>/img/project_02.png" data-toggle="lightbox" data-gallery="example-gallery" class="c-card-project rounded-5 col-md-6">
-                                <img src="<?= $url; ?>/img/project_02.png" alt="project_02" class="c-card-project__image">
-                            </a>
-                            <a href="<?= $url; ?>/img/project_03.png" data-toggle="lightbox" data-gallery="example-gallery" class="c-card-project rounded-5 col-12">
-                                <img src="<?= $url; ?>/img/project_03.png" alt="project_03" class="c-card-project__image">
-                            </a>
+
+                            <div class="col-md-6">
+                                <a href="<?= $url; ?>/img/project_01.png" data-toggle="lightbox" class="c-card-project rounded-5">
+                                    <img src="<?= $url; ?>/img/project_01.png" alt="project_01" class="c-card-project__image">
+                                </a>
+                            </div>
+
+                            <div class="col-md-6">
+                                <a href="<?= $url; ?>/img/project_02.png" data-toggle="lightbox" class="c-card-project rounded-5">
+                                    <img src="<?= $url; ?>/img/project_02.png" alt="project_02" class="c-card-project__image">
+                                </a>
+                            </div>
+
+                            <div class="col-12">
+                                <a href="<?= $url; ?>/img/project_03.png" data-toggle="lightbox" class="c-card-project rounded-5 ">
+                                    <img src="<?= $url; ?>/img/project_03.png" alt="project_03" class="c-card-project__image">
+                                </a>
+                            </div>
+                            
                         </div>
                     </div>
 
