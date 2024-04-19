@@ -58,8 +58,7 @@ body{
         }
     }
     
-
-    @include media-breakpoint-down(md){
+    @media(max-width: 830px){
         &::before, &::after{
             content: none;            
         }

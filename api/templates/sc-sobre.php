@@ -9,7 +9,7 @@
                     <p class="opacity-25 fw-lighter "> Desde o início da minha jornada como designer independente há quase 8 anos, tenho realizado trabalhos à distância para agências, prestado consultoria para startups e colaborado com indivíduos talentosos para desenvolver produtos digitais para uso empresarial e do consumidor. Sou confiante de maneira discreta, naturalmente curioso e constantemente em busca de aprimorar minhas habilidades, enfrentando um problema de design por vez. </p>
                 </div>
             </div>
-            <div class="d-none d-lg-block col-lg-auto opacity-50">
+            <div class="d-none d-xl-block col-lg-auto opacity-50">
                 <?php include 'card.php'; ?>
             </div>
         </div>

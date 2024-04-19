@@ -46,7 +46,7 @@
                     </form>
                 </div>
             </div>
-            <div class="d-none d-lg-block col-lg-auto opacity-50">
+            <div class="d-none d-xl-block col-lg-auto opacity-50">
                 <?php include 'card.php'; ?>
             </div>
         </div>
