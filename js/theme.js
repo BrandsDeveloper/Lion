@@ -24,10 +24,8 @@ imageProg.forEach( (image) => {
     image.addEventListener('mousemove', (e) => {
         let x = e.offsetX;
         let y = e.offsetY;
-        let imgWidth = image.clientWidth;
-        let imgHeight = image.clientHeight;
-        let moveX = (x - imgWidth/2);
-        let moveY = (y - imgHeight/2);
+        let moveX = (x - 100/2);
+        let moveY = (y - 100/2);
 
         image.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
     })
