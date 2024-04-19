@@ -57,6 +57,18 @@ body{
             right: 40px;
         }
     }
+
+    @media(min-width:992px) and (max-width: 1299px){
+        &::before{
+            left: 55px;
+        }
+
+        &::after{
+            right: 55px;
+        }
+    }
+
+
     
     @media(max-width: 830px){
         &::before, &::after{

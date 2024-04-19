@@ -55,8 +55,17 @@
         width: 70px;
         justify-content: center;
         transform: rotate(-90deg) translateX(-50vh);
+        
+        @media(min-width:992px) and (max-width: 1299px){
+            left: -6px;
+
+            li{
+                a{
+                    font-size: 14px;
+                }
+            }
+        }
     }
-    
 }
 
 // .menu-fixed{
