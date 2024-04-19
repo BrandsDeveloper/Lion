@@ -4,7 +4,7 @@
         <div class="row justify-content-between">
             <div class="col-lg">
                 <div class="d-flex flex-column h-100 align-items-start justify-content-center ">
-                    <p class="py-1 px-4 rounded-5 border border-1 border-primary text-primary mb-5"> Serviços </p>
+                    <p class="py-1 px-4 rounded-5 border border-1 border-primary text-primary mb-5 mb-md-0 mb-xxl-5"> Serviços </p>
                     <div class="cards-servicos">
                         <div class="rounded-50 border border-light p-4 pe-5">
                             <h2 class="fw-light">Design d/ Web Site</h2>

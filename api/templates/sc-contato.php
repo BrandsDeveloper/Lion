@@ -8,7 +8,7 @@
                     <h1 class="fw-light mb-0">Vamos trabalhar <span class="h1 text-primary fw-light">juntos! </span> </h1>
                     <p class="opacity-50 fw-lighter">Me conta sua história, e acredite que ela possa ser real!</p>
 
-                    <form data-action="/api/inserir_contato.php" method="POST" class="form-contato w-100 mt-4 mt-md-3 mt-xl-4">
+                    <form data-action="/api/inserir_contato.php" method="POST" class="form-contato w-100 mt-4 mt-md-2 mt-xxl-4">
 
                         <div class="form-group mb-4">
                             <label for="nome">Qual seu nome?</label>
@@ -35,7 +35,7 @@
                             <input type="text" class="form-control" name="projeto" id="projeto" placeholder="Detalhes do projeto">
                         </div>
 
-                        <button type="button" class="btn btn-primary text-white fw-light text-uppercase mt-4 rounded-5 d-inline-block py-3"> 
+                        <button type="button" class="btn btn-primary text-white fw-light text-uppercase mt-4 mt-md-0 mt-xxl-4 rounded-5 d-inline-block py-3"> 
                             <i class="fa-solid fa-envelope me-2"></i> 
                             Me mostre suas ideais! 
                             <div class="spinner-border d-none" id="load" role="status">

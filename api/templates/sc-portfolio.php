@@ -4,7 +4,7 @@
         <div class="row justify-content-between">
             <div class="col-lg">
                 <div class="d-flex flex-column h-100 align-items-start justify-content-center ">
-                    <p class="py-1 px-4 rounded-5 border border-1 border-primary text-primary mb-5"> Portfólio </p>
+                    <p class="py-1 px-4 rounded-5 border border-1 border-primary text-primary mb-5 mb-md-0 mb-xxl-5"> Portfólio </p>
                     <h1 class="fw-light mb-0">Meus melhores <span class="h1 text-primary fw-light">projetos! </span> </h1>
                     <p class="opacity-50 fw-lighter">Esses são as minhas melhores versões para você</p>
 
