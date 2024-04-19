@@ -209,7 +209,18 @@
                     filter: grayscale(0);
                 }
             }
-            
+
+        }
+
+        @media(min-width: 992px) and (max-width: 1399px){
+
+            width: 450px;
+            height: 450px;
+            right: 230px;
+
+            .prog.figma { right: 5.5%; }
+            .prog.webflow { right: 8.5%; }
+
         }
         
     }

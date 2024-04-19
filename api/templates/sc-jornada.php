@@ -4,7 +4,7 @@
         <div class="row justify-content-between">
             <div class="col-lg">
                 <div class="d-flex flex-column h-100 align-items-start justify-content-center ">
-                    <p class="py-1 px-4 rounded-5 border border-1 border-primary text-primary mb-5"> Jornada </p>
+                    <p class="py-1 px-4 rounded-5 border border-1 border-primary text-primary mb-5 mb-md-0 mb-xl-5"> Jornada </p>
                     <div class="line-time">
                         <ul>
                             <li> 
@@ -20,7 +20,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="mt-5"> 
+                            <li class="mt-5 mt-md-0 mt-xl-5"> 
                                 <span class="small text-primary opacity-50">2013 - 2023 </span> 
                                 <div>
                                     <div>
