@@ -7,9 +7,10 @@
 **/ 
 ?>
 
-    <div class="position-absolute w-100 h-100">
-        <div class="particle particle__one"></div>
-        <div class="particle particle__two"></div>
+    <div class="position-absolute w-100 h-100 overflow-hidden">
+        <?php for ($i=0; $i < 25; $i++) : ?>
+            <div class="particle particle__<?= $i; ?>"></div>
+        <?php endfor; ?>
     </div>
 
     <!-- Scripts Theme 
