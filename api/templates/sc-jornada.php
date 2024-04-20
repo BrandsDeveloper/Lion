@@ -1,3 +1,6 @@
+<!-- Jornada
+============================================ -->
+
 <section class="sc-container" id="jornada">
     <div class="container">
         <div class="row justify-content-between">
@@ -46,3 +49,5 @@
         </div>
     </div>
 </section>
+
+<!-- End Jornada -->

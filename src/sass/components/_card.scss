@@ -117,5 +117,19 @@
             height: 1px;
             background: $primary;
         }
+
+    }
+
+    @include media-breakpoint-down(sm){
+        &__image{
+            width: 200px;
+            height: 200px;
+        }
+
+        &__bar{
+            &::before, &::after{
+                content: none;
+            }
+        }
     }
 }

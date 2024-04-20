@@ -7,11 +7,15 @@
 **/ 
 ?>
 
-    <div class="position-absolute w-100 top-0 overflow-hidden" style="height: 7392px;">
+
+    <!-- Particle
+    ============================================ -->
+    <div id="container-particle">
         <?php for ($i=0; $i < 25; $i++) : ?>
             <div class="particle particle__<?= $i; ?>"></div>
         <?php endfor; ?>
     </div>
+    <!-- End Particle -->
 
     <!-- Scripts Theme 
     ============================================ -->
@@ -20,6 +24,7 @@
 
 </div>
 <!-- End Wrapper  -->
+
 
 </body>
 </html>

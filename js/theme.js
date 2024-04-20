@@ -36,6 +36,21 @@ imageProg.forEach( (image) => {
 })
 
 /* ======================================
+    AJUSTE TAMANHO DO CONTAINER PARTICLES
+====================================== */
+
+let wrapper = document.querySelector('.start-wrapper');
+let particle = document.querySelector('#container-particle');
+
+setTimeout(() => {
+    
+    let height = wrapper.clientHeight;
+    particle.style.height = height;
+
+}, 1000);
+
+
+/* ======================================
     SCROLL MENU E SCROLL SECTIONS
 ====================================== */
 

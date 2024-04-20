@@ -1,3 +1,6 @@
+<!-- Feedback
+============================================ -->
+
 <section class="sc-container" id="feedback">
     <div class="container">
         <div class="row justify-content-between">
@@ -11,11 +14,11 @@
                         <div class="swiper depoimento">
                             <div class="swiper-wrapper">
                                 <?php for ($i=0; $i < 3; $i++) : ?>
-                                <div class="swiper-slide pe-5">
+                                <div class="swiper-slide px-3">
                                     <div class="p-4 rounded-5 border border-light c-card-depoimento">
                                         <div class="row mb-4">
-                                            <div class="col-auto"> <img src="<?= $url; ?>/img/image-sem-filtro.png" class="c-card-depoimento__image" alt=""> </div>
-                                            <div class="col">
+                                            <div class="col-sm-auto text-center text-sm-start"> <img src="<?= $url; ?>/img/image-sem-filtro.png" class="c-card-depoimento__image" alt=""> </div>
+                                            <div class="col text-center text-sm-start">
                                                 <h3 class="text-white m-0">Victor Bronzer</h3>
                                                 <p class="ps-4 small fw-lighter c-card-depoimento__bar"> Diretor criativo de <span class="text-primary fw-normal">Paraglider Game</span> </p>
                                             </div>
@@ -62,3 +65,5 @@
         });
     }
 </script>
+
+<!-- End Feedback -->

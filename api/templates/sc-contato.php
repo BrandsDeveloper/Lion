@@ -1,3 +1,7 @@
+
+<!-- Contato
+============================================ -->
+
 <section class="sc-container" id="contato">
     <div class="container">
         <div class="row justify-content-between">
@@ -51,3 +55,5 @@
         </div>
     </div>
 </section>
+
+<!-- End Contato -->
