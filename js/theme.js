@@ -45,7 +45,7 @@ let particle = document.querySelector('#container-particle');
 setTimeout(() => {
     
     let height = wrapper.clientHeight;
-    particle.style.height = height;
+    particle.style.height = `${height}`;
 
 }, 1000);
 

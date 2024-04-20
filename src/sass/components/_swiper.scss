@@ -1,0 +1,47 @@
+.swiper{
+    position: static !important;
+}
+
+.depoimento{
+
+    div[class*=swiper-button-]{
+        opacity: .5;
+        border: 1px solid #fff;
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+        top: 112%;
+        z-index: 20;
+
+        &::after, &::before{
+            font-size: 16px;
+            color: #fff;
+        }
+
+        &::after{
+            padding-left: 3px;
+        }
+
+    }
+
+    .swiper-button-next{
+        left: 85px;
+    }
+
+    .swiper-pagination-fraction{
+        position: absolute;
+        top: 108%;
+        left: 53px;
+        opacity: .5;
+        font-size: 12px;
+        display: inline;
+        width: fit-content;
+        width: -moz-fit-content;
+
+        span[class*=swiper-pagination-]{
+            font-size: 12px;
+        }
+    }
+
+
+}
