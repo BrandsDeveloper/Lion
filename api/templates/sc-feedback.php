@@ -42,14 +42,16 @@
 </section>
 
 <script>
-    var swiper = new Swiper(".depoimento", {
-        pagination: {
-        el: ".swiper-pagination",
-        type: "fraction",
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
+    window.onload = function() {
+        var swiper = new Swiper(".depoimento", {
+            pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    }
 </script>
