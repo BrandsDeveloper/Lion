@@ -45,7 +45,7 @@ let particle = document.querySelector('#container-particle');
 setTimeout(() => {
     
     let height = wrapper.clientHeight;
-    particle.style.height = `${height}`;
+    particle.style.height = `${height}px`;
 
 }, 1000);
 
@@ -207,7 +207,9 @@ let btn = contato.querySelector('button[type="button"]');
 let load = document.querySelector('#load');
 let result = document.querySelector('#result');
 
-btn.addEventListener('click', () =>{
+btn.addEventListener('click', (e) =>{
+
+    e.preventDefault();
 
     let ajax = new XMLHttpRequest();
 
