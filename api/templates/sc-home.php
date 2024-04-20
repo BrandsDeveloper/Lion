@@ -2,7 +2,7 @@
     <div class="border-animate w-100"></div>
     <div class="container">
         <div class="row justify-content-between gy-5">
-            <div class="col-lg-7">
+            <div class="col-lg">
                 <div class="d-flex flex-column h-100 justify-content-end pt-5">
                     <div class="position-relative">
                         <p class="fs-3 fs-home">Web.</p>
