@@ -94,4 +94,28 @@
         height: 100px;
         border-radius: 100%;
     }
+
+    &__bar{
+        position: relative;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: -16.5px;
+            left: 0;
+            width: 1px;
+            height: 29px;
+            background: $primary;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 0;
+            width: 19px;
+            height: 1px;
+            background: $primary;
+        }
+    }
 }
