@@ -41,7 +41,7 @@ window.onload = function() {
         AJUSTE TAMANHO DO CONTAINER PARTICLES
     ====================================== */
 
-    setTimeout( () => {
+    setInterval( () => {
         
         let wrapper = document.querySelector('.start-wrapper');
         let particle = document.querySelector('#container-particle');
