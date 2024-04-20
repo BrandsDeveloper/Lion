@@ -206,7 +206,7 @@ window.onload = function() {
 
     let contato = document.querySelector('.form-contato');
     let caminho = contato.getAttribute('data-action');
-    let btn = contato.querySelector('button[type="button"]');
+    let btn = contato.querySelector('button');
     let load = document.querySelector('#load');
     let result = document.querySelector('#result');
 

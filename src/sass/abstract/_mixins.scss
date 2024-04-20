@@ -15,11 +15,12 @@
     }
 }
 
-@mixin particle( $tamanho, $top, $left, $delay, $cor){
+@mixin particle( $tamanho, $top, $left, $right, $delay, $cor){
     width: $tamanho;
     height: $tamanho;
     top: $top;
     left: $left;
+    right: $right;
     animation-duration: $delay;
     background: radial-gradient(circle, $cor -10%, transparent 70%);
 }

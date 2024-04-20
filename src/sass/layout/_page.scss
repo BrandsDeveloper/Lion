@@ -272,13 +272,15 @@
         border-radius: 100%;
         animation: moveParticle infinite;
 
-        &__0{ @include particle(400px, 50px, -150px, 10s, #0e3a7c); }
+        // Estrutura @include particle(W e H, TOP, LEFT, RIGHT, ANIMATE-DURATION, COR)
 
-        &__1{ @include particle(450px, 170px, -50px, 15s, #69131B); }
+        &__0{ @include particle(600px, 50px, -250px, initial, 10s, #0e3a7c); }
+
+        &__1{ @include particle(500px, -200px, -50px, initial, 15s, #69131B); }
         
-        &__2{ @include particle(600px, 550px, -210px, 10s, #200E80); }
+        &__2{ @include particle(600px, 550px, initial, -210px, 10s, #200E80); }
         
-        &__3{ @include particle(500px, 650px, 90px, 15s, #69131B); }
+        &__3{ @include particle(500px, 650px, initial, 200px, 15s, #69131B); }
 
     }
 
