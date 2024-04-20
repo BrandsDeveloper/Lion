@@ -210,7 +210,7 @@ window.onload = function() {
     let load = document.querySelector('#load');
     let result = document.querySelector('#result');
 
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', function(e) {
 
         e.preventDefault();
 
