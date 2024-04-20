@@ -17,7 +17,6 @@ include ('templates/sc-programas.php');
 include ('templates/sc-portfolio.php');
 include ('templates/sc-feedback.php');
 include ('templates/sc-contato.php');
-include ('conn.php');
 echo '</main>';
 
 include ('footer.php'); 
