@@ -7,6 +7,11 @@
 **/ 
 ?>
 
+    <div class="position-absolute w-100 h-100">
+        <div class="particle particle__one"></div>
+        <div class="particle particle__two"></div>
+    </div>
+
     <!-- Scripts Theme 
     ============================================ -->
     <script src="<?= $url; ?>/js/theme.js"></script>

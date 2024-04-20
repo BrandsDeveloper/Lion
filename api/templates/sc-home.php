@@ -1,5 +1,4 @@
 <section class="sc-container" id="home">
-    <div class="border-animate w-100"></div>
     <div class="container">
         <div class="row justify-content-between gy-5">
             <div class="col-lg">

@@ -84,3 +84,38 @@ body{
     // overflow-y: scroll;
     // height: 100vh;
 }
+
+.particle {
+    position: absolute;
+    border-radius: 100%;
+    animation: move 10s infinite;
+
+    &__one{
+        top: 50px;
+        left: -150px;
+        background: radial-gradient(circle, #0e3a7c -70%, transparent 70%);
+    }
+
+    &__two{
+        top: -250px;
+        left: -50px;
+        background: radial-gradient(circle, #69131B -70%, transparent 70%);
+    }
+}
+
+@keyframes moveParticle {
+    0% {
+        width: 400px;
+        height: 400px;
+    }
+    50% {
+        width: 500px;
+        height: 500px;
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        width: 400px;
+        height: 400px;
+    }
+}
