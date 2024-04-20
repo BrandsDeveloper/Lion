@@ -41,16 +41,30 @@ window.onload = function() {
         AJUSTE TAMANHO DO CONTAINER PARTICLES
     ====================================== */
 
-    let wrapper = document.querySelector('.start-wrapper');
-    let particle = document.querySelector('#container-particle');
-
-    setTimeout(() => {
+    setTimeout( () => {
+        
+        let wrapper = document.querySelector('.start-wrapper');
+        let particle = document.querySelector('#container-particle');
         
         let height = wrapper.clientHeight;
         particle.style.height = `${height}px`;
 
     }, 1000);
 
+    /* ======================================
+        SWIPER
+    ====================================== */
+
+    var swiper = new Swiper(".depoimento", {
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 
     /* ======================================
         SCROLL MENU E SCROLL SECTIONS

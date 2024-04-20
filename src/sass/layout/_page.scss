@@ -274,13 +274,13 @@
 
         // Estrutura @include particle(W e H, TOP, LEFT, RIGHT, ANIMATE-DURATION, COR)
 
-        &__0{ @include particle(600px, 50px, -250px, initial, 10s, #0e3a7c); }
+        &__0{ @include particle(600px, 50px, -250px, initial, 5s, #0e3a7c); }
 
-        &__1{ @include particle(500px, -200px, -50px, initial, 15s, #69131B); }
+        &__1{ @include particle(500px, -200px, -50px, initial, 10s, #69131B); }
         
-        &__2{ @include particle(600px, 550px, initial, -210px, 10s, #200E80); }
+        &__2{ @include particle(600px, 550px, initial, -210px, 5s, #200E80); }
         
-        &__3{ @include particle(500px, 650px, initial, 200px, 15s, #69131B); }
+        &__3{ @include particle(500px, 650px, initial, 200px, 10s, #69131B); }
 
     }
 
@@ -289,13 +289,21 @@
             transform: scale(0.8);
             opacity: 0.5;
         }
-        50% {
+        35% {
+            transform: scale(1.1);
+            opacity: 0.7;
+        }
+        60% {
+            transform: scale(1.5);
+            opacity: 1;
+        }
+        85% {
             transform: scale(1.1);
             opacity: 0.7;
         }
         100% {
-            transform: scale(1.5);
-            opacity: 1;
+            transform: scale(0.8);
+            opacity: 0.5;
         }
     }
 }

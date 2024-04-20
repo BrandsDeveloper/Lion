@@ -38,10 +38,10 @@
                             <input type="text" class="form-control" name="projeto" id="projeto" placeholder="Detalhes do projeto">
                         </div>
 
-                        <button type="submit" class="btn btn-primary text-white fw-light text-uppercase mt-4 mt-md-0 mt-xxl-4 rounded-5 d-inline-block py-3"> 
+                        <button type="submit" class="btn btn-primary text-white fw-light text-uppercase mt-4 mt-md-0 mt-xxl-4 rounded-5 d-flex align-items-center py-3"> 
                             <i class="fa-solid fa-envelope me-2"></i> 
                             Me mostre suas ideais! 
-                            <div class="spinner-border d-none" id="load" role="status">
+                            <div class="spinner-border d-none" id="load" role="status" style="width: 20px; height: 20px; border-width: 2px;">
                                 <span class="visually-hidden">Loading...</span>
                             </div>
                         </button>

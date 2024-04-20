@@ -51,19 +51,4 @@
     </div>
 </section>
 
-<script>
-    window.onload = function() {
-        var swiper = new Swiper(".depoimento", {
-            pagination: {
-            el: ".swiper-pagination",
-            type: "fraction",
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        });
-    }
-</script>
-
 <!-- End Feedback -->
