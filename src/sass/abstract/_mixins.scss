@@ -14,3 +14,12 @@
         color: $hover-text;
     }
 }
+
+@mixin particle( $tamanho, $top, $left, $delay, $cor){
+    width: $tamanho;
+    height: $tamanho;
+    top: $top;
+    left: $left;
+    animation-duration: $delay;
+    background: radial-gradient(circle, $cor -10%, transparent 70%);
+}

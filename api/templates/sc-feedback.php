@@ -20,7 +20,7 @@
                                             <div class="col-sm-auto text-center text-sm-start"> <img src="<?= $url; ?>/img/image-sem-filtro.png" class="c-card-depoimento__image" alt=""> </div>
                                             <div class="col text-center text-sm-start">
                                                 <h3 class="text-white m-0">Victor Bronzer</h3>
-                                                <p class="ps-4 small fw-lighter c-card-depoimento__bar"> Diretor criativo de <span class="text-primary fw-normal">Paraglider Game</span> </p>
+                                                <p class="ps-sm-4 small fw-lighter c-card-depoimento__bar"> Diretor criativo de <span class="text-primary fw-normal">Paraglider Game</span> </p>
                                             </div>
                                         </div>
                                         <div>

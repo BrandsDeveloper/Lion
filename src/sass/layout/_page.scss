@@ -270,51 +270,30 @@
         position: absolute;
         z-index: -1;
         border-radius: 100%;
-        animation: moveParticle 15s infinite;
+        animation: moveParticle infinite;
 
-        &__0{
-            top: 50px;
-            left: -150px;
-            animation-delay: 1s;
-            background: radial-gradient(circle, #0e3a7c -10%, transparent 70%);
-        }
+        &__0{ @include particle(400px, 50px, -150px, 10s, #0e3a7c); }
 
-        &__1{
-            top: -170px;
-            left: -50px;
-            animation-delay: 3s;
-            background: radial-gradient(circle, #69131B -10%, transparent 70%);
-        }
+        &__1{ @include particle(450px, 170px, -50px, 15s, #69131B); }
+        
+        &__2{ @include particle(600px, 550px, -210px, 10s, #200E80); }
+        
+        &__3{ @include particle(500px, 650px, 90px, 15s, #69131B); }
 
-        &__2{
-            top: 550px;
-            right: -210px;
-            animation-delay: 6s;
-            background: radial-gradient(circle, #200E80 -10%, transparent 70%);
-        }
-
-        &__3{
-            top: 650px;
-            right: 90px;
-            animation-delay: 9s;
-            background: radial-gradient(circle, #69131B -10%, transparent 70%);
-        }
     }
 
     @keyframes moveParticle {
         0% {
-            width: 400px;
-            height: 400px;
+            transform: scale(0.8);
+            opacity: 0.5;
         }
         50% {
-            width: 500px;
-            height: 500px;
             transform: scale(1.1);
             opacity: 0.7;
         }
         100% {
-            width: 400px;
-            height: 400px;
+            transform: scale(1.5);
+            opacity: 1;
         }
     }
 }

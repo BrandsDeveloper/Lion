@@ -30,7 +30,7 @@
 
     .swiper-pagination-fraction{
         position: absolute;
-        top: 108%;
+        top: 107%;
         left: 53px;
         opacity: .5;
         font-size: 12px;
@@ -40,6 +40,10 @@
 
         span[class*=swiper-pagination-]{
             font-size: 12px;
+        }
+
+        @include media-breakpoint-down(sm){
+            top: 109%;
         }
     }
 
