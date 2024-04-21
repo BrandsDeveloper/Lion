@@ -30,7 +30,14 @@ $password = $_ENV['DB_PASS'];
 
 // $conn = "pgsql:port=$port;dbname=$dbname;user=$user;password=$password;host=$host;";
 
-echo "mysql:host=$host;port=$port;dbname=$dbname", $user, $password;
+// Criar uma conexão PDO
+$pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $user, $password);
+
+var_dump($pdo);
+
+if($pdo){
+    echo "Conectado ao banco de dados MYSQL com sucesso!";
+}
 
 include ('footer.php'); 
 
