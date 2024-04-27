@@ -22,3 +22,4 @@ jobs:
         echo "Database: $DB_TABLE"
         echo "User: $DB_USER"
         echo "Password: $DB_PASS"
+        var_dump($GITHUB_ENV)
