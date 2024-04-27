@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Footer
- * @package liontheme
+ * @package lion
  * @source project-lion
  * 
 **/ 

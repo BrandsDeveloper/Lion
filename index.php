@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Index
- * @package liontheme
+ * @package lion
  * @source project-lion
  * 
 **/

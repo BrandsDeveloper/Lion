@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Header
- * @package liontheme
+ * @package lion
  * @source project-lion
  * 
 **/
