@@ -12,7 +12,7 @@ try {
     $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $user, $password);
     
     if($pdo){
-        echo "Conectado ao banco de dados MYSQL com sucesso!";
+        echo "Conectado ao banco de dados MYSQL com sucesso! ";
     }
 
 } catch (PDOException $e) {
