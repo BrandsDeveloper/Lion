@@ -216,7 +216,8 @@ window.onload = function() {
         AJAX ENVIO DE FORMS
     ====================================== */
 
-    let url = document.querySelector('head').getAttribute('data-url');
+    // let url = document.querySelector('head').getAttribute('data-url');
+    let url = window.location.href;
 
     let contato = document.querySelector('.form-contato');
     let caminho = contato.getAttribute('data-action');
