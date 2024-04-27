@@ -6,7 +6,7 @@
  * 
 **/
 
-$url = 'https://'.$_SERVER["HTTP_HOST"];
+$url = 'http://'.$_SERVER["HTTP_HOST"];
 
 ?>
 
