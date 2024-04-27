@@ -6,6 +6,7 @@
  * 
 **/
 
+var_dump($_SERVER);
 $url = 'http://'.$_SERVER["HTTP_HOST"];
 
 ?>
