@@ -1,0 +1,22 @@
+name: Acessos Workflow
+
+on: [push]
+
+jobs:
+  verificar_acessos:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Configurar Variáveis de Ambiente
+      run: |
+        echo "DB_HOST=${{ secrets.DB_HOST }}"
+        echo "DB_TABLE=${{ secrets.DB_TABLE }}"
+        echo "DB_USER=${{ secrets.DB_USER }}"
+        echo "DB_PASS=${{ secrets.DB_PASS }}"
+        echo "DB_HOST_DEV=${{ vars.DB_HOST_DEV }}"
+        echo "DB_TABLE_DEV=${{ vars.DB_TABLE_DEV }}"
+        echo "DB_USER_DEV=${{ vars.DB_USER_DEV }}"
+        echo "DB_PASS_DEV=${{ vars.DB_PASS_DEV }}"
