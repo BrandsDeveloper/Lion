@@ -11,10 +11,6 @@ echo "Tabela do banco de dados: $dbTable<br>";
 echo "Usuário do banco de dados: $dbUser<br>";
 echo "Senha do banco de dados: $dbPass<br>";
 
-phpinfo();
-
-// var_dump($GITHUB_ENV);
-
 // $host = $_ENV['DB_HOST'];
 // $port = $_ENV['DB_PORT'];
 // $dbname = $_ENV['DB_TABLE'];
