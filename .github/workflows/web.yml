@@ -1,22 +1,20 @@
-on: 
+name: FTP Test
+
+on:
   push:
-    branches:
-      - web
-name: 🚀 Subindo Site
+    branches: [web]
+
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  deploy:
+    name: 🚀 Deploy website every commit
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v2
-    
-    - name: 📂 Upload FTP arquivos
-      uses: sebastianpopp/ftp-action@releases/v2
-      with:
-        server: ${{ secrets.ftp_host }}
-        username: ${{ secrets.ftp_username }}
-        password: ${{ secrets.ftp_password }}
-        localDir: "lion"
-        remoteDir: "www/projetos"
-        forceSsl: true
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: 📂 Upload FTP arquivos
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.ftp_host }}
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
