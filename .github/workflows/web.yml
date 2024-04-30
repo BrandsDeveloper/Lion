@@ -1,24 +1,21 @@
-name: FTP Test
-
-on:
+on: 
   push:
-    branches: 
-    - web
-
+    branches:
+      - web
+name: 🚀 Subindo Site
 jobs:
-  deploy:
-    name: 🚀 Deploy website every commit
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: "Checkout"
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: "Deploy"
-        uses: milanmk/actions-file-deployer@master
-        with:
-          remote-protocol: "sftp"
-          remote-host: ${{ secrets.ftp_host }}
-          remote-user: ${{ secrets.ftp_username }}
-          ssh-private-key: ${{ secrets.ftp_password }}
-          remote-path: "/home/brandsdev/www/projetos/lion"
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.ftp_host }}
+        username: ${{ secrets.ftp_username }}
+        password: ${{ secrets.ftp_password }}
+        server-dir: projetos/
+        local-dir: ./lion
