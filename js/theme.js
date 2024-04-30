@@ -240,7 +240,7 @@ window.onload = function() {
         
         let post = 'nome='+nome+'&email='+email+'&tel='+tel+'&orcamento='+valor+'&projeto='+projeto;
         
-        ajax.open('POST', url+caminho, true);
+        ajax.open('POST', url+caminho+'.php', true);
         ajax.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         
         ajax.onreadystatechange = () =>{
