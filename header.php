@@ -12,7 +12,7 @@ $paste = $_SERVER["SCRIPT_URL"];
 $url_complete = $_SERVER["SCRIPT_URI"];
 
 $url = $protocol.$domain.$paste;
-
+ 
 ?>
 
 <!DOCTYPE html>
