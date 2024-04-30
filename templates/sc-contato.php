@@ -11,7 +11,7 @@
                     <h1 class="fw-light mb-0">Vamos trabalhar <span class="h1 text-primary fw-light">juntos! </span> </h1>
                     <p class="opacity-50 fw-lighter">Me conta sua história, e acredite que ela possa ser real!</p>
 
-                    <form data-action="/api/inserir_contato.php" method="POST" class="form-contato w-100 mt-4 mt-md-2 mt-xxl-4">
+                    <form data-action="/inserir_contato.php" method="POST" class="form-contato w-100 mt-4 mt-md-2 mt-xxl-4">
 
                         <div class="form-group mb-4">
                             <label for="nome">Qual seu nome?</label>
