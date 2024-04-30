@@ -5,6 +5,7 @@ $dbname = $_ENV['DB_TABLE'];
 $user = $_ENV['DB_USER'];
 $password = $_ENV['DB_PASS'];
 
+
 try {
 
     // Criar uma conexão PDO
