@@ -24,7 +24,7 @@ verificarVazio($tel);
 verificarVazio($valor);
 verificarVazio($projeto);
 
-include __DIR__ . '/conn.php';
+include_once __DIR__ . '/conn.php';
 
 try {
 
