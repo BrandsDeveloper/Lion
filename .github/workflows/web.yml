@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v2
     
-    - name: 📂 Sync arquivos
+    - name: 📂 Upload FTP arquivos
       uses: sebastianpopp/ftp-action@releases/v2
       with:
         server: ${{ secrets.ftp_host }}
@@ -19,3 +19,4 @@ jobs:
         password: ${{ secrets.ftp_password }}
         localDir: "lion"
         remoteDir: "www/projetos"
+        forceSsl: true
