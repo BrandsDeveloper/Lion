@@ -10,9 +10,9 @@ try {
     // Criar uma conexão PDO
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
     
-    if($pdo){
-        echo "Conectado ao banco de dados MYSQL com sucesso! ";
-    }
+    // if($pdo){
+    //     echo "Conectado ao banco de dados MYSQL com sucesso! ";
+    // }
 
 } catch (PDOException $e) {
     // Se ocorrer um erro na conexão, ele será exibido aqui
