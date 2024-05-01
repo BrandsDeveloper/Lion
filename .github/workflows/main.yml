@@ -1,7 +1,7 @@
 on: 
   push:
     branches:
-      - king
+      - main
 name: 🚀 Subindo Site
 jobs:
   web-deploy:
