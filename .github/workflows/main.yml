@@ -1,5 +1,8 @@
-on: push
-name: 🚀 Deploy website on push
+on: 
+  push:
+    branches:
+      - king
+name: 🚀 Subindo Site
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -7,11 +10,11 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
-
-    - name: 📂 Sync files
+    
+    - name: 📂 Upload Arquivos
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.host }}
         username: ${{ secrets.user }}
         password: ${{ secrets.pass }}
-        debug: true
+        server-dir: projetos/lion
