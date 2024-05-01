@@ -17,4 +17,4 @@ jobs:
         server: ${{ secrets.host }}
         username: ${{ secrets.user }}
         password: ${{ secrets.pass }}
-        server-dir: projetos/lion
+        server-dir: projetos/lion/
