@@ -9,7 +9,8 @@
 $protocol = $_SERVER["REQUEST_SCHEME"].'://';
 $domain = $_SERVER["HTTP_HOST"];
 $paste = $_SERVER["SCRIPT_URL"];
-$url_complete = $_SERVER["SCRIPT_URI"];
+// $paste = $_SERVER["REQUEST_URI"];
+// $url_complete = $_SERVER["SCRIPT_URI"];
 
 $url = $protocol.$domain.$paste;
  
