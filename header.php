@@ -12,8 +12,8 @@ $paste = $_SERVER["SCRIPT_URL"];
 // $paste = $_SERVER["REQUEST_URI"];
 // $url_complete = $_SERVER["SCRIPT_URI"];
 
-$url = $protocol.$domain.$paste;
- 
+$url = $protocol.$domain.$paste; 
+
 ?>
 
 <!DOCTYPE html>
