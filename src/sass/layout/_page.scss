@@ -154,6 +154,9 @@
             border-radius: 70px 150px 150px 70px;
         }
     }
+    .btn-close{
+        background: rgba(0,0,0,0) url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>") center/1em auto no-repeat ;
+    }
 
 }
 
@@ -267,8 +270,8 @@
 $vermelho: #bd1424;
 $azul: #0468fd;
 $roxo: #7400F9;
-$rosa: #7D0E6C;
-$time: 50s;
+$rosa: #a0108a;
+$time: 20s;
 
 #container-particle{
     position: absolute;
@@ -282,6 +285,7 @@ $time: 50s;
         position: absolute;
         z-index: -1;
         border-radius: 100%;
+        opacity: .5;
         animation: moveParticle infinite;
 
         // Estrutura @include particle(W e H, TOP, LEFT, RIGHT, ANIMATE-DURATION, COR)
@@ -316,24 +320,47 @@ $time: 50s;
 
         &__14{ @include particle(500px, 4100px, 300px, initial, $time, $vermelho); }
 
-        &__15{ @include particle(500px, 4400px, initial, 300px, $time, $roxo); }
+        &__15{ @include particle(800px, 4400px, initial, 16%, $time, $roxo); }
 
         &__16{ @include particle(600px, 4300px, initial, -200px, $time, $azul); }
+
+        &__17{ @include particle(800px, 5000px, initial, -50px, $time, $vermelho); }
+
+        &__18{ @include particle(180px, 5400px, 150px, initial, $time, $azul); }
+
+        &__19{ @include particle(400px, 5000px, -200px, initial, $time, $roxo); }
+        
+        &__20{ @include particle(400px, 5300px, -150px, initial, $time, $rosa); }
+        
+        &__21{ @include particle(600px, 6200px, -230px, initial, $time, $azul); }
+        
+        &__22{ @include particle(600px, 6300px, initial, -150px, $time, $roxo); }
+        
+        &__23{ @include particle(700px, 6700px, initial, 500px, $time, $azul); }
+        
+        &__24{ @include particle(300px, 7200px, initial, 600px, $time, $rosa); }
+        
+        &__25{ @include particle(150px, 7300px, 600px, initial, $time, $azul); }
+        
+        &__26{ @include particle(800px, 6900px, 500px, initial, $time, $roxo); }
 
     }
 
     @keyframes moveParticle {
         0% {
             transform: scale(1.3);
-            opacity: 1;
+            opacity: .5;
+
         }
         50% {
             transform: scale(1);
-            opacity: 0.5;
+            opacity: .7;
+
         }
         100% {
             transform: scale(1.3);
-            opacity: 1;
+            opacity: .5;
+
         }
     }
 }

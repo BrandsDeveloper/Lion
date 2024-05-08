@@ -11,7 +11,7 @@
     <!-- Particle
     ============================================ -->
     <div id="container-particle">
-        <?php for ($i=0; $i < 25; $i++) : ?>
+        <?php for ($i=0; $i <= 26; $i++) : ?>
             <div class="particle particle__<?= $i; ?>"></div>
         <?php endfor; ?>
     </div>
