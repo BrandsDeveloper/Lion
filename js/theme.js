@@ -242,7 +242,7 @@ window.onload = function() {
         ajax.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         
         ajax.onreadystatechange = () =>{
-            if( ajax.readyState == 4 && ajax.status == 200 && ajax.responseText['status'] == 'sucesso' ){
+            if( ajax.readyState == 4 && ajax.status == 200 ){
                 
                 load.classList.add('d-none');
                 modal.click();
