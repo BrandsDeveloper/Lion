@@ -1,10 +1,10 @@
 <?php
 
-$nome = addslashes($_POST['nome']);
-$email = addslashes($_POST['email']);
-$tel = addslashes($_POST['tel']);
-$valor = addslashes($_POST['orcamento']);
-$projeto = addslashes($_POST['projeto']);
+$nome       = addslashes($_POST['nome']);
+$email      = addslashes($_POST['email']);
+$tel        = addslashes($_POST['tel']);
+$valor      = addslashes($_POST['orcamento']);
+$projeto    = addslashes($_POST['projeto']);
 
 function verificarVazio($post){
 
@@ -53,9 +53,9 @@ try {
 
     var_dump($stmt);
 
-    echo json_encode( array(
-        'status' => "sucesso",
-    ));
+    // echo json_encode( array(
+    //     'status' => "sucesso",
+    // ));
     
 } catch (PDOException $e) {
 
