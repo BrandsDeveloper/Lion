@@ -10,8 +10,6 @@ try {
     // Criar uma conexão PDO
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
 
-    var_dump($pdo);
-    
     // if($pdo){
     //     echo "Conectado ao banco de dados MYSQL com sucesso! ";
     // }
