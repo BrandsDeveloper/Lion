@@ -25,12 +25,12 @@
 
                         <div class="form-group mb-4">
                             <label for="tel">Qual seu número? <span class="small opacity-25">(opcional)</span> </label>
-                            <input type="text" class="form-control" name="tel" id="tel" placeholder="(xx) x xxxx-xxxx" maxlength="11">
+                            <input type="text" class="form-control" name="tel" id="tel" placeholder="(xx) x xxxx-xxxx" maxlength="15">
                         </div>
 
                         <div class="form-group mb-4">
                             <label for="orcamento">Qual seu orçamento? <span class="small opacity-25">(opcional)</span></label>
-                            <input type="text" class="form-control" name="orcamento" id="orcamento" placeholder="R$ x.xxx,xx">
+                            <input type="text" class="form-control" name="orcamento" id="orcamento" maxlength="14" placeholder="R$ x.xxx,xx">
                         </div>
 
                         <div class="form-group mb-4">

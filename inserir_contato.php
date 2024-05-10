@@ -1,14 +1,15 @@
 <?php
 
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$tel = $_POST['tel'];
-$valor = $_POST['orcamento'];
-$projeto = $_POST['projeto'];
+$nome = addslashes($_POST['nome']);
+$email = addslashes($_POST['email']);
+$tel = addslashes($_POST['tel']);
+$valor = addslashes($_POST['orcamento']);
+$projeto = addslashes($_POST['projeto']);
 
 function verificarVazio($post){
 
     if( empty($post) ) {
+
         http_response_code(405);
         echo json_encode( array(
             'status' => "405",
@@ -50,7 +51,11 @@ try {
         ':projeto' => $projeto, 
     ));
 
-    echo 'Inserido';
+    var_dump($stmt);
+
+    echo json_encode( array(
+        'status' => "sucesso",
+    ));
     
 } catch (PDOException $e) {
 
