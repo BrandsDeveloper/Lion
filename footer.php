@@ -16,11 +16,14 @@
         <?php endfor; ?>
     </div>
     <!-- End Particle -->
-
+    
+    <?php include __DIR__ . '/templates/modal.php'; ?>
+    
     <!-- Scripts Theme 
     ============================================ -->
     <script src="<?= $url; ?>/js/theme.js"></script>
     <script src="<?= $url; ?>/js/plugins.js"></script>
+
 
 </div>
 <!-- End Wrapper  -->

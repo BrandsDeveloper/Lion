@@ -220,7 +220,10 @@ window.onload = function() {
     let btn = document.querySelector('.form-contato button');
 
     let load = document.querySelector('#load');
-    let result = document.querySelector('#result');
+    let modal = document.querySelector('#modal-ajax');
+    let modal_close = document.querySelector('#modalAjax .btn-close');
+    let ajax_title = document.querySelector('#modalAjax #ajax-title');
+    let ajax_content = document.querySelector('#modalAjax #ajax-content');
     
     btn.addEventListener('click', function(e) {
         
@@ -242,18 +245,22 @@ window.onload = function() {
             if( ajax.readyState == 4 && ajax.status == 200 && ajax.responseText['status'] == 'sucesso' ){
                 
                 load.classList.add('d-none');
-                result.innerHTML = "Informações inseridas com sucesso!!";
+                modal.click();
+                ajax_title.innerText = "Mensagem enviada com sucesso!!";
+                ajax_content.innerText = "Informações inseridas no banco de dados!!";
                 setTimeout( () => {
-                    result.innerHTML = "";
+                    modal_close.click();
                 }, 5000);
 
                 console.log('DEU CERTO!!');
                 
             } else if( ajax.readyState == 4 || ajax.status == 405 ){
                 
-                load.classList.add('d-none');
                 let response = JSON.parse(ajax.responseText);
-                result.innerHTML = response.error;
+                load.classList.add('d-none');
+                modal.click();
+                ajax_title.innerText = "Erro ao envair mensagem!!";
+                ajax_content.innerText = response.error;
                 
             } else if( ajax.readyState == 4 && ajax.status == 400 ){
                 console.log('DEU CERTO NO SERVIDOR, MAS DEU ERRO 404 !!');

@@ -6,7 +6,6 @@ $tel        = addslashes($_POST['tel']);
 $valor      = addslashes($_POST['orcamento']);
 $projeto    = addslashes($_POST['projeto']);
 
-var_dump($_POST);
 
 function verificarVazio($post){
 
@@ -51,9 +50,6 @@ try {
         ':valor' => $valor, 
         ':projeto' => $projeto, 
     ));
-
-    // echo 'Inserido';
-    var_dump($stmt);
     
 } catch (PDOException $e) {
 
