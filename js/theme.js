@@ -221,17 +221,17 @@ window.onload = function() {
 
     let load = document.querySelector('#load');
     let result = document.querySelector('#result');
-    let nome = document.querySelector('#nome').value;
-    let email = document.querySelector('#email').value;
-    let telefone = document.querySelector('#tel').value;
-    let valor = document.querySelector('#orcamento').value;
-    let projeto = document.querySelector('#projeto').value;
-
+    
     btn.addEventListener('click', function(e) {
-
+        
         e.preventDefault();
         
         load.classList.remove('d-none');
+        let nome = document.querySelector('input#nome').value;
+        let email = document.querySelector('input#email').value;
+        let telefone = document.querySelector('input#tel').value;
+        let valor = document.querySelector('input#orcamento').value;
+        let projeto = document.querySelector('input#projeto').value;
         let post = 'nome='+nome+'&email='+email+'&tel='+telefone+'&orcamento='+valor+'&projeto='+projeto;
         
         let ajax = new XMLHttpRequest();

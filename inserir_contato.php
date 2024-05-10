@@ -6,6 +6,8 @@ $tel        = addslashes($_POST['tel']);
 $valor      = addslashes($_POST['orcamento']);
 $projeto    = addslashes($_POST['projeto']);
 
+var_dump($_POST);
+
 function verificarVazio($post){
 
     if( empty($post) ) {
