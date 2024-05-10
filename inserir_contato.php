@@ -9,7 +9,6 @@ $projeto    = addslashes($_POST['projeto']);
 function verificarVazio($post){
 
     if( empty($post) ) {
-
         http_response_code(405);
         echo json_encode( array(
             'status' => "405",
@@ -51,11 +50,8 @@ try {
         ':projeto' => $projeto, 
     ));
 
+    // echo 'Inserido';
     var_dump($stmt);
-
-    // echo json_encode( array(
-    //     'status' => "sucesso",
-    // ));
     
 } catch (PDOException $e) {
 
