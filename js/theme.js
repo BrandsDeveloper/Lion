@@ -216,7 +216,7 @@ window.onload = function() {
 
     // let url = document.querySelector('head').getAttribute('data-url');
     let url = window.location.href;
-    let caminho = document.getAttribute('.form-contato data-action');
+    let caminho = document.querySelector('.form-contato').getAttribute('data-action');
     let btn = document.querySelector('.form-contato button');
 
     let load = document.querySelector('#load');
