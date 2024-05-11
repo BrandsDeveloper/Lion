@@ -4,7 +4,7 @@
 
 ##### Obs: Os textos e imagens que foram utilizados foram tirados da internet como exemplificação para a construção e complemento do projeto quaisquer informações cituadas são verdadeiras. 
 
-![GitHub top language](https://img.shields.io/github/languages/top/BrandsDeveloper/CardapioOnline) ![GitHub language count](https://img.shields.io/github/languages/count/BrandsDeveloper/CardapioOnline) ![GitHub repo size](https://img.shields.io/github/repo-size/BrandsDeveloper/CardapioOnline)
+![GitHub top language](https://img.shields.io/github/languages/top/BrandsDeveloper/Lion) ![GitHub language count](https://img.shields.io/github/languages/count/BrandsDeveloper/Lion) ![GitHub repo size](https://img.shields.io/github/repo-size/BrandsDeveloper/Lion)
 
 
 ## Tecnologias e Ferramentas Utilizadas para o Projeto:
