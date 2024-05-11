@@ -23,13 +23,15 @@ window.onload = function() {
         var r = v.replace(/\D/g, "");
         r = r.replace(/^0/, "");
         if (r.length > 10) {
-          r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+          r = r.replace(/^(\d\d)(\d)(\d{4})(\d{4}).*/, "($1) $2 $3-$4");
         } else if (r.length > 5) {
           r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
         } else if (r.length > 2) {
           r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
-        } else {
+        } else if (r.length == 1) {
           r = r.replace(/^(\d*)/, "($1");
+        } else {
+          r = r.replace(/^(\d*)/, "$1");
         }
         return r;
     }
@@ -59,6 +61,12 @@ window.onload = function() {
         r = r.replace(/^0/, "");
 
         switch (r.length) {
+            case 1:
+                r = r.replace(/^(\d*)/, "R$ 0,0$1");
+                break;
+            case 2:
+                r = r.replace(/^(\d*)/, "R$ 0,$1");
+                break;
             case 3:
                 r = r.replace(/^(\d)(\d{2})/, "R$ $1,$2");
                 break;
@@ -232,7 +240,7 @@ window.onload = function() {
         load.classList.remove('d-none');
         let nome = document.querySelector('input#nome').value;
         let email = document.querySelector('input#email').value;
-        let telefone = document.querySelector('input#tel').value;
+        let telefone = tel.value;
         let valor = document.querySelector('input#orcamento').value;
         let projeto = document.querySelector('input#projeto').value;
         let post = 'nome='+nome+'&email='+email+'&tel='+telefone+'&orcamento='+valor+'&projeto='+projeto;
@@ -252,8 +260,6 @@ window.onload = function() {
                     modal_close.click();
                 }, 5000);
 
-                console.log('DEU CERTO!!');
-                
             } else if( ajax.readyState == 4 || ajax.status == 405 ){
                 
                 let response = JSON.parse(ajax.responseText);

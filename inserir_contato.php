@@ -1,10 +1,10 @@
 <?php
 
-$nome       = addslashes($_POST['nome']);
+$nome       = addslashes(utf8_encode($_POST['nome']));
 $email      = addslashes($_POST['email']);
 $tel        = addslashes($_POST['tel']);
 $valor      = addslashes($_POST['orcamento']);
-$projeto    = addslashes($_POST['projeto']);
+$projeto    = addslashes(utf8_encode($_POST['projeto']));
 
 
 function verificarVazio($post){
