@@ -28,6 +28,8 @@ window.onload = function() {
           r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
         } else if (r.length > 2) {
           r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+        } else if (r.length == 2) {
+            r = r.replace(/^(\d*)/, "($1)");
         } else if (r.length == 1) {
           r = r.replace(/^(\d*)/, "($1");
         } else {
@@ -90,7 +92,7 @@ window.onload = function() {
                 break;
         
             default:
-                r = r.replace(/^(\d*)/, "R$ 0,$1");
+                r = r.replace(/^(\d*)/, "");
                 break;
         }
 
