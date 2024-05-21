@@ -80,7 +80,12 @@ body{
 }
 
 .start-wrapper{
-    // scroll-snap-type: y mandatory;
-    // overflow-y: scroll;
-    // height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    
+    @include media-breakpoint-down(lg){
+        scroll-snap-type: none;
+        height: initial;
+    }
 }

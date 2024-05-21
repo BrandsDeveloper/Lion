@@ -18,7 +18,7 @@
             <p class="fs-12 opacity-50">2024 Lion. Todos os Direitos Reservados</p>
         </div>
 
-        <div class="d-flex gap-2 justify-content-center mt-4 mb-5 mb-md-4 mb-xl-5">
+        <div class="d-flex gap-2 justify-content-center mt-4 mt-md-0 mt-xl-4 mb-5 mb-md-3 mb-xl-5">
             <a href="#facebook" target="_blank" class="c-card__rs" rel="noopener noreferrer">
                 <i class="fa-brands fa-facebook-f"></i>
             </a>
@@ -33,7 +33,7 @@
             </a>
         </div>
 
-        <div>
+        <div class="mb-md-3 mb-xl-0">
             <a href="mailto:contato@design.dev.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-uppercase w-100 rounded-5 py-3 px-0 text-white fw-light"> <i class="fa-solid fa-envelope me-2"></i> Fale comigo!</a>
         </div>
 

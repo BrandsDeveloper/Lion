@@ -103,16 +103,60 @@ window.onload = function() {
         ESCONDER MENU
     ====================================== */
 
-    // let menu = document.querySelector('.header-default .menu');
-    // let content = document.querySelector('.start-wrapper');
+    let menu = document.querySelector('.header-default .menu');
+    let content = document.querySelector('.start-wrapper');
 
-    // content.onscroll = function() {
-    //     if (content.scrollTop > 150) {
-    //         menu.classList.add('opacity-0');
-    //     } else {
-    //         menu.classList.remove('opacity-0');
-    //     }
-    // };
+    content.onscroll = function() {
+        if (content.scrollTop > 150) {
+            menu.classList.add('opacity-0');
+        } else {
+            menu.classList.remove('opacity-0');
+        }
+    };
+
+    
+    /* ======================================
+        SCROLL WHELL
+    ====================================== */
+
+    var isScrolling = false;
+    var startWrapper = document.querySelector('.start-wrapper');
+
+    startWrapper.addEventListener('wheel', function (e) {
+        if (isScrolling) {
+            e.preventDefault();
+            return;
+        }
+
+        e.preventDefault();
+
+        var delta = e.deltaY;
+        var step = 50; // Ajuste o valor conforme necessário
+
+        if (delta > 0) {
+            console.log('↓↓↓');
+            // Simula clique na seta para baixo
+            isScrolling = true;
+            startWrapper.scrollBy({
+                top: step, // Ajuste o valor conforme necessário
+                behavior: 'smooth'
+            });
+        } else {
+            console.log('↑↑↑');
+            // Simula clique na seta para cima
+            isScrolling = true;
+            startWrapper.scrollBy({
+                top: -step, // Ajuste o valor conforme necessário
+                behavior: 'smooth'
+            });
+        }
+
+        setTimeout(function () {
+            isScrolling = false;
+        }, 500); // Ajuste o tempo conforme necessário
+
+    }, { passive: false });
+
 
     /* ======================================
         MOUSE MAGNECT IMG PROG
