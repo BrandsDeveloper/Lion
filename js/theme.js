@@ -186,7 +186,7 @@ window.onload = function() {
 
     setInterval( () => {
         
-        let wrapper = document.querySelector('.start-wrapper');
+        let wrapper = document.querySelector('main');
         let particle = document.querySelector('#container-particle');
         
         let height = wrapper.clientHeight;
