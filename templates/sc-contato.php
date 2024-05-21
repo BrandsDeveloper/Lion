@@ -38,14 +38,13 @@
                             <input type="text" class="form-control" name="projeto" id="projeto" placeholder="Detalhes do projeto">
                         </div>
 
-                        <button type="submit" class="btn btn-primary text-white fw-light text-uppercase mt-4 mt-md-0 mt-xxl-4 rounded-5 d-flex align-items-center py-3"> 
-                            <i class="fa-solid fa-envelope me-2"></i> 
+                        <button type="submit" class="btn btn-primary text-white fw-light text-uppercase mt-4 mt-md-0 mt-xxl-4 rounded-5 d-flex align-items-center"> 
+                            <i class="fa-solid fa-envelope me-2 border me-2 p-2 rounded-circle"></i> 
                             Me mostre suas ideais! 
-                            <div class="spinner-border d-none" id="load" role="status" style="width: 20px; height: 20px; border-width: 2px;">
+                            <div class="spinner-border ms-2 d-none" id="load" role="status" style="width: 20px; height: 20px; border-width: 2px;">
                                 <span class="visually-hidden">Loading...</span>
                             </div>
                         </button>
-                        <p id="result" class="text-white small mt-3"></p>
                     </form>
                 </div>
             </div>
