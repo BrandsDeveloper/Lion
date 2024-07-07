@@ -1,9 +1,9 @@
 <?php
 
-$host = $_ENV['DB_HOST'];
-$dbname = $_ENV['DB_TABLE'];
-$user = $_ENV['DB_USER'];
-$password = $_ENV['DB_PASS'];
+$host = $_SERVER['DB_HOST'];
+$dbname = $_SERVER['DB_TABLE'];
+$user = $_SERVER['DB_USER'];
+$password = $_SERVER['DB_PASS'];
 
 try {
 
